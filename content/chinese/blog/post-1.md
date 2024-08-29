@@ -1,42 +1,45 @@
 ---
-title: "如何利用視覺運算協助監察"
+title: "利用視覺運算協助監察"
 meta_title: ""
-description: "this is meta description"
+description: "介紹視覺運算的應用場景和優點"
 date: 2024-08-04T05:00:00Z
 image: "/images/dbcoastline.png"
 categories: ["Artificial intelligence", "Computer vision"]
 # author: "John Doe"
-tags: ["computer vision", "Artificial Intelligence", "Surveillance", "Object Detection"]
+tags: ["視覺運算", "computer vision", "Artificial Intelligence", "Surveillance", "Object Detection"]
 draft: false
 ---
-## What is computer vision
+## 視覺運算是甚麼？
 
 **視覺運算** 是**人工智能 (AI)**的分支技術計算機能理解和理解視頻中視覺資訊，並作出反應。視覺運算應用在**物業保安**可分析視頻源並檢測各種活動，自動檢測出可疑活動，大大減少人手消耗，例如：:
 <hr>
 
-## How computer vision can help you
 
-1. **Object detection** 
-Identify specific objects within a scene, such as people, vehicles, luggage, or packages.
-2. **Anomaly detection**: 
-Detect unusual or unexpected behavior, such as loitering, trespassing, or suspicious package handling.
-3. **Motion detection**: 
-Trigger alerts when motion is detected in a specific area, such as a doorway, corridor, or parking lot.
-4. **Facial recognition**: 
-Identify individuals by their facial features and track their movement within the surveillance area.
-5. **Multi Object tracking**: 
-Follow the movement of multiple objects (e.g., people, vehicles) across multiple cameras and zones.
+## 視覺運算如何降低成本
+
+1. **物體偵測**
+自動識別場景中的特定對象，例如: 人、車輛、行李或包裹。
+2. **異常偵測**: 
+自動偵測到異常活動或意外，例如: 陌人徘徊、侵入或可疑包裹處理。
+3. **運動偵測**: 
+偵測有人在闖入特定指定的區域（例如: 門口、走廊或停車場）偵測到有人運動或活動，或者吸煙和打球, 再觸發警報。
+4. **人臉識別**: 
+透過臉部特徵識別人員並追蹤他們在監控區域內活動。
+5. **多目標追蹤 (Multi-object Tracking)**: 
+能夠同時追蹤多個物體（例如: 人、車輛、動物）在多個攝影機和區域中移動。
 <hr>
 
-## Why 5G make deployment easier than ever
+## 為什麼 5G 簡化視覺運臬的部署?
 
-Computer vision for surveillance is already a powerful tool, and when combined with the speed, reliability, and low latency of 5G networks. We partner with China Mobile in several deployments in Hong Kong:
-1. **Faster Video Streaming**: With 5G's ultra-high-speed network capabilities (up to 20 Gbps), you can stream high-definition video feeds in real-time, 
-reducing latency and ensuring that critical surveillance data is transmitted quickly.
-2. **Real-Time Analytics**: Leverage the low-latency benefits of 5G to enable real-time analytics on computer vision algorithms, allowing for faster 
-detection and response times when anomalies are detected.
-3. **Edge Computing**: Utilize edge computing capabilities in 5G networks to process video feeds closer to the source (e.g., cameras), reducing latency and 
-increasing processing power.
-4. **AI-Powered Insights**: Combine 5G's ultra-low latency with AI-powered computer vision insights to enable real-time decision-making, such as sending 
-alerts for potential security breaches or detecting suspicious activity in areas like airports or seaports.
-5. **Cloud-Based Services**: Integrate 5G connectivity with cloud-based services to enable remote monitoring, real-time analytics, and centralized management of surveillance systems.
+當前的監控視覺運算(Computer Vision) 已經發展成強大協作工具，加上5G網絡速度、可靠性和低延遲結合，效果更為顯著。我們與中國移動 (China Mobile Hong Kong, CMHK) 在香港進行多次部署合作：
+
+1. **快速視頻串流**：
+利用5G的超高速網絡能力（高達20 Gbps），您可以實時串流高清視頻，減少延遲，確保關鍵的監控數據快速傳輸。
+2. **實時分析**：
+利用5G的低延遲優勢，實現電腦視覺算法的實時分析，當檢測到異常時，能夠更快地做出反應。
+3. **邊緣計算**：
+利用5G網絡的邊緣計算能力，在靠近源頭（如攝像頭）處處理視頻流，減少延遲並提高處理能力。
+4. **AI驅動的洞察**：
+結合5G的超低延遲和AI驅動的電腦視覺洞察，實現實時決策，例如發送潛在安全漏洞的警報或檢測機場或海港等地的可疑活動。
+5. **基於雲的服務**：
+將5G連接與基於雲的服務集成，實現遠程監控、實時分析和監控系統的集中管理。
