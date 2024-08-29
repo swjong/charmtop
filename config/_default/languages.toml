@@ -8,5 +8,5 @@ weight = 1
 [zh]
 languageName = "繁體中文"
 languageCode = "zh-hant"
-contentDir = "content/Chinese"
+contentDir = "content/chinese"
 weight = 2
