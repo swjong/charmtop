@@ -1,5 +1,5 @@
 ---
-title: "How to use computer vision for surveillance"
+title: "如何利用視覺運算協助監察"
 meta_title: ""
 description: "this is meta description"
 date: 2024-08-04T05:00:00Z
@@ -11,7 +11,7 @@ draft: false
 ---
 ## What is computer vision
 
-**Computer vision** is a subfield of **artificial intelligence (AI)** that enables computers to interpret and understand visual information from images or videos. In the context of **physical security**, computer vision can be used to analyze video feeds and detect various types of activity, such as:
+**視覺運算** 是**人工智能 (AI)**的分支技術計算機能理解和理解視頻中視覺資訊，並作出反應。視覺運算應用在**物業保安**可分析視頻源並檢測各種活動，自動檢測出可疑活動，大大減少人手消耗，例如：:
 <hr>
 
 ## How computer vision can help you
