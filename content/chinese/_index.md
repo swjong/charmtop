@@ -13,14 +13,14 @@ banner:
 features:
   - title: "我們的服務範圍"
     image: "/images/service-1.png"
-    content: "Hugoplate is a comprehensive starter template that includes everything you need to get started with your Hugo project. What's Included in Hugoplate"
+    content: "以下是我們提供的服務概述以及我們為每個服務建議的具體解決方案"
     bulletpoints:
-      - "10+ Pre-build pages"
-      - "95+ Google Pagespeed Score"
-      - "Build with Hugo and TailwindCSS for easy and customizable styling"
-      - "Fully responsive on all devices"
-      - "SEO-optimized for better search engine rankings"
-      - "**Open-source and free** for personal and commercial use"
+      - "NAS 和雲端備份"
+      - "網絡及佈線"
+      - "伺服器和虛擬化平台、雲原生安裝"
+      - "PC 安裝"
+      - "NAS 檔案分享安裝"
+      - "閉路電視及監察系統安裝"
     button:
       enable: false
       label: "Get Started Now"
