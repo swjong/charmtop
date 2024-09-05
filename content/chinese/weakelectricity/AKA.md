@@ -20,5 +20,4 @@ social:
 
 ### 視覺運算可以進行多目標監察，成本愈來愈低
 {{< gallery dir="images/AKA" class="" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
-
 不少樓宇均缺乏保安人手，面對保安、火災、非法傾倒垃圾和其他闖入風險，利用AI視像技術可以馬上識別各種潛在風險。
