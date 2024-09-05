@@ -26,26 +26,27 @@ features:
       label: "Get Started Now"
       link: "#"
 
-  - title: "Discover the Key Features Of Hugo"
+ - title: "Software and Maintenance Services"
     image: "/images/service-2.png"
-    content: "Hugo is an all-in-one web framework for building fast, content-focused websites. It offers a range of exciting features for developers and website creators. Some of the key features are:"
+    content: "Our server installation services include basic setup, assembly, and 
+    product connection, data transfer, access permission setting, and backup mode setting. :"
     bulletpoints:
-      - "Zero JS, by default: No JavaScript runtime overhead to slow you down."
-      - "Customizable: Tailwind, MDX, and 100+ other integrations to choose from."
-      - "UI-agnostic: Supports React, Preact, Svelte, Vue, Solid, Lit and more."
+      - "Productivity Software Installation."
+      - "Antivirus Endpoint Protections Installation."
+      - "AI Services Integration."
     button:
-      enable: false
+      enable: true
       label: "Get Started Now"
       link: "https://github.com/zeon-studio/hugoplate"
 
-  - title: "The Top Reasons to Choose Hugo for Your Hugo Project"
+  - title: "Security Camera and Weak Electricity Projects"
     image: "/images/service-3.png"
-    content: "With Hugo, you can build modern and content-focused websites without sacrificing performance or ease of use."
+    content: "We pride ourselves on offering comprehensive security solutions tailored to meet the unique needs of businesses and organizations."
     bulletpoints:
-      - "Instantly load static sites for better user experience and SEO."
-      - "Intuitive syntax and support for popular frameworks make learning and using Hugo a breeze."
-      - "Use any front-end library or framework, or build custom components, for any project size."
-      - "Built on cutting-edge technology to keep your projects up-to-date with the latest web standards."
+      - "ensure all cameras are properly positioned, connected to power sources, and linked to the DVR."
+      - "Establishing a suitable retention policy."
+      - "Law Enforcement Retrieval Services."
+      - "AI Integration, object-tracking, segmentation and analysis."
     button:
       enable: false
       label: ""
