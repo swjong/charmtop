@@ -29,7 +29,7 @@ features:
  - title: "Software and Maintenance Services"
     image: "/images/service-2.png"
     content: "Our server installation services include basic setup, assembly, and 
-    product connection, data transfer, access permission setting, and backup mode setting. :"
+    product connection, data transfer, access permission setting, and backup mode setting"
     bulletpoints:
       - "Productivity Software Installation."
       - "Antivirus Endpoint Protections Installation."
