@@ -1,6 +1,6 @@
 ---
 title: 以AI視像鏡頭協助保安
-email: samwilson@email.com
+email: IT@charmtop.com.hk
 image: "/images/avatar.png"
 description: this is meta description
 social:
