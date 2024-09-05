@@ -1,7 +1,7 @@
 ---
 # Banner
 banner:
-  title: "歡迎到訪創高顧問有限公司，我們提供具競爭力的資訊科技服務，利用科技提昇競爭力
+  title: "Welcome to Charmtop Consultants, your trusted partner in harnessing the power of technology.:
   "
   image: "/images/banner.png"
   # button:
@@ -11,25 +11,25 @@ banner:
 
 # Features
 features:
-  - title: "我們的服務範圍"
+  - title: "Our Network Services"
     image: "/images/service-1.png"
-    content: "以下是我們提供的服務概述以及我們為每個服務建議的具體解決方案"
+    content: "Here's an overview of the services we offer and the specific solutions we suggest for each. "
     bulletpoints:
-      - "NAS 和雲端備份"
-      - "網絡及佈線"
-      - "伺服器和虛擬化平台、雲原生安裝"
-      - "PC 安裝"
-      - "NAS 檔案分享安裝"
-      - "閉路電視及監察系統安裝"
+      - "NAS and cloud second backup"
+      - "Network Cabling"
+      - "Server and virtualization platform installation"
+      - "PC Installation"
+      - "NAS Installation"
+      - "CCTV Installation"
     button:
       enable: false
       label: "Get Started Now"
       link: "#"
 
- - title: "Software and Maintenance Services"
+  - title: "Software and Maintenance Services"
     image: "/images/service-2.png"
     content: "Our server installation services include basic setup, assembly, and 
-    product connection, data transfer, access permission setting, and backup mode setting"
+    product connection, data transfer, access permission setting, and backup mode setting. :"
     bulletpoints:
       - "Productivity Software Installation."
       - "Antivirus Endpoint Protections Installation."
