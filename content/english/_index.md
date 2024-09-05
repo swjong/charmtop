@@ -35,7 +35,7 @@ features:
       - "Antivirus Endpoint Protections Installation."
       - "AI Services Integration."
     button:
-      enable: true
+      enable: false
       label: "Get Started Now"
       link: "https://github.com/zeon-studio/hugoplate"
 
