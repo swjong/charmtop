@@ -1,7 +1,7 @@
 ---
 # Banner
 banner:
-  title: "Welcome to Charmtop Consultants, your trusted partner in harnessing the power of technology.:
+  title: "歡迎到訪創高顧問有限公司，我們提供具競爭力的資訊科技服務，利用科技提昇競爭力.:
   "
   image: "/images/banner.png"
   # button:
@@ -11,9 +11,9 @@ banner:
 
 # Features
 features:
-  - title: "Our Network Services"
+  - title: "我們的服務範圍"
     image: "/images/service-1.png"
-    content: "Here's an overview of the services we offer and the specific solutions we suggest for each. "
+    content: "以下是我們提供的服務概述以及我們為每個服務建議的具體解決方案. "
     bulletpoints:
       - "NAS and cloud second backup"
       - "Network Cabling"
