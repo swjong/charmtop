@@ -1,0 +1,59 @@
+############# Chinese navigation ##############
+
+# main menu
+[[main]]
+name = "主頁"
+pageRef = "/"
+weight = 1
+
+[[main]]
+name = "關於我們"
+pageRef = "/about"
+weight = 2
+
+[[main]]
+weight = 3
+name = "我們的服務"
+pageRef = "/services"
+
+[[main]]
+weight = 4
+name = "案例介紹"
+
+[[main]]
+parent = "案例介紹"
+name = "技術內容"
+pageRef = "/blog"
+
+
+[[main]]
+parent = "案例介紹"
+name = "弱電工程"
+pageRef = "/weakelectricity"
+
+[[main]]
+parent = "案例介紹"
+name = "工程分類"
+pageRef = "/categories"
+
+# [[main]]
+# parent = "Case Studies"
+# name = "404 Page"
+# pageRef = "/404"
+
+
+# footer menu
+[[footer]]
+name = "關於我們"
+pageRef = "/about"
+weight = 1
+
+[[footer]]
+name = "我們的服務"
+pageRef = "/services"
+weight = 2
+
+[[footer]]
+name = "私隱政策"
+pageRef = "/privacy-policy"
+weight = 3

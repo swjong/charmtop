@@ -1,0 +1,59 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+pageRef = "/"
+weight = 1
+
+[[main]]
+name = "About"
+pageRef = "/about"
+weight = 2
+
+[[main]]
+weight = 3
+name = "Our Services"
+pageRef = "/Services"
+
+[[main]]
+weight = 4
+name = "Case Studies"
+
+[[main]]
+parent = "Case Studies"
+name = "Blog"
+pageRef = "/blog"
+
+
+[[main]]
+parent = "Case Studies"
+name = "Weakelectricity"
+pageRef = "/weakelectricity"
+
+[[main]]
+parent = "Case Studies"
+name = "Categories"
+pageRef = "/categories"
+
+# [[main]]
+# parent = ""
+# name = "404 Page"
+# pageRef = "/404"
+
+
+# footer menu
+[[footer]]
+name = "About"
+pageRef = "/about"
+weight = 1
+
+[[footer]]
+name = "Our Services"
+pageRef = "/elements"
+weight = 2
+
+[[footer]]
+name = "Privacy Policy"
+pageRef = "/privacy-policy"
+weight = 3

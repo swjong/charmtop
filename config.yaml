@@ -1,0 +1,7 @@
+languages:
+  zh:
+    menu:
+      main:
+        - name: "服務"
+          url: "/services/"
+          weight: 2
