@@ -14,27 +14,13 @@ weight = 2
 [[main]]
 weight = 3
 name = "Our Services"
-pageRef = "/Services"
+pageRef = "/services"
 
 [[main]]
 weight = 4
 name = "Case Studies"
+pageRef = "/case_study"
 
-[[main]]
-parent = "Case Studies"
-name = "Blog"
-pageRef = "/blog"
-
-
-[[main]]
-parent = "Case Studies"
-name = "Weakelectricity"
-pageRef = "/weakelectricity"
-
-[[main]]
-parent = "Case Studies"
-name = "Categories"
-pageRef = "/categories"
 
 # [[main]]
 # parent = ""
