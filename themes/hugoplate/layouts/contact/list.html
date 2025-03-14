@@ -112,33 +112,48 @@
   {{ end }}
 
   {{ if site.Params.google_map.enable }}
-    <script>
-      function initMap() {
-        const mapElement = document.getElementById("map");
-        const mapInstance = new google.maps.Map(mapElement, {
-          center: { 
-            lat: {{ site.Params.google_map.map_latitude }}, 
-            lng: {{ site.Params.google_map.map_longitude }} 
-          },
-          zoom: 15,
-        });
-
-        const marker = new google.maps.Marker({
-          map: mapInstance,
-          position: { 
-            lat: {{ site.Params.google_map.map_latitude }}, 
-            lng: {{ site.Params.google_map.map_longitude }} 
-          },
-        });
-      }
-
-      document.addEventListener('DOMContentLoaded', function() {
-        const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key={{ site.Params.google_map.map_api_key }}&callback=initMap`;
-        script.async = true;
-        script.defer = true;
-        document.head.appendChild(script);
-      });
-    </script>
+    <div id="map" 
+             data-latitude="{{ site.Params.google_map.map_latitude }}" 
+             data-longitude="{{ site.Params.google_map.map_longitude }}" 
+             data-marker="{{ site.Params.google_map.map_marker }}"
+             data-api-key="{{ site.Params.google_map.map_api_key }}"
+             data-marker-name="Contact Location" 
+             style="height: 400px; width: 100%;">
+        </div>
+    
+        <script>
+          async function initMap() {
+            const { Map } = await google.maps.importLibrary("maps");
+            const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+            
+            const mapElement = document.getElementById("map");
+            const mapInstance = new Map(mapElement, {
+              center: { 
+                lat: parseFloat(mapElement.dataset.latitude), 
+                lng: parseFloat(mapElement.dataset.longitude) 
+              },
+              zoom: 15,
+              mapId: "8f51c45b7cd9a219"
+            });
+    
+            const marker = new AdvancedMarkerElement({
+              map: mapInstance,
+              position: { 
+                lat: parseFloat(mapElement.dataset.latitude), 
+                lng: parseFloat(mapElement.dataset.longitude) 
+              },
+              title: mapElement.dataset.markerName
+            });
+          }
+    
+          // Initialize the Maps loader
+          const mapElement = document.getElementById("map");
+          const apiKey = mapElement.dataset.apiKey;
+          const script = document.createElement('script');
+          script.src = "https://maps.googleapis.com/maps/api/js?key=" + apiKey + "&v=weekly";
+          script.async = true;
+          document.head.appendChild(script);
+          script.onload = initMap;
+        </script>
   {{ end }}
 {{ end }}
