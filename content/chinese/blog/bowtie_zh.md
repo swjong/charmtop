@@ -10,7 +10,7 @@ keywords: "AI在保險業的應用,虛擬保險發展,Histotripsy療法優勢,�
 ## 引言
 人工智能（AI）與保險業的融合正顛覆傳統運營模式，虛擬保險公司憑藉AI技術快速響應市場需求，推動創新療法普及。本文以Bowtie與港怡醫院合作將組織碎化技術（Histotripsy）納入自願醫保附加保障為例，剖析AI如何重塑保險業，並探討此創新療法對香港醫療生態的影響。
 
-{{< image src="/images/gallery/bowtie.png" caption="Bowtie虛擬保險" alt="Bowtie Virtual Insurance" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="Bowtie Virtual Insurance" webp="false" >}}
+{{< image src="images/gallery/bowtie.png" caption="Bowtie虛擬保險" alt="Bowtie Virtual Insurance" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="Bowtie Virtual Insurance" webp="false" >}}
 
 ## AI如何改變保險業？
 
