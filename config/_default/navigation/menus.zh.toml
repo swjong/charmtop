@@ -21,6 +21,11 @@ weight = 4
 name = "案例介紹"
 pageRef = "/casestudies"
 
+[[main]]
+weight = 5
+name = "最新消息"
+pageRef = "/blog"
+
 # [[main]]
 # parent = "Case Studies"
 # name = "404 Page"

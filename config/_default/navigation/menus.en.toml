@@ -19,8 +19,12 @@ pageRef = "/services"
 [[main]]
 weight = 4
 name = "Case Studies"
-pageRef = "/case_study"
+pageRef = "/casestudies"
 
+[[main]]
+weight = 5
+name = "Blog"
+pageRef = "/blog"
 
 # [[main]]
 # parent = ""
