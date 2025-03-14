@@ -1,6 +1,6 @@
 ######################## default configuration ####################
 # The base URL of your site (required). This will be prepended to all relative URLs.
-baseURL = "https://main.d18amvkre2hl3y.amplifyapp.com"
+baseURL = "https://production.d35tuqruih9xrf.amplifyapp.com"
 # Title of your website (required).
 title = "Charmtop"
 # Your theme name
@@ -16,7 +16,7 @@ disableLanguages = [
 ] # example: ["fr"] for disable french language. see https://gohugo.io/content-management/multilingual/
 hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
 # default language
-defaultContentLanguage = 'en'
+defaultContentLanguage = 'zh'
 # defaultContentLanguageInSubdir need to be true if you want to use the language code as a subdirectory and language specific 404 page
 defaultContentLanguageInSubdir = false
 
