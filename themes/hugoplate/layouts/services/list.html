@@ -1,0 +1,33 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+  <section class="section-sm">
+    <div class="container">
+      <div class="row gy-5 justify-center">
+        {{ range .RegularPages }}
+          <div class="lg:col-4 md:col-6">
+            <div class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg p-8 text-center">
+              {{ if .Params.image }}
+                <img
+                  class="mx-auto mb-6 h-20"
+                  src="{{ .Params.image | absURL }}"
+                  alt="{{ .Title }}"
+                  width="80"
+                  height="80"
+                />
+              {{ end }}
+              <h4 class="mb-3">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h4>
+              <p class="mb-4">{{ .Summary }}</p>
+              <a class="btn btn-primary btn-sm" href="{{ .RelPermalink }}">
+                Learn More
+                <i class="fa fa-arrow-right pl-2"></i>
+              </a>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}
