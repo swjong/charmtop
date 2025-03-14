@@ -177,7 +177,8 @@
             <div id="map" 
                  data-latitude="{{ .Site.Params.google_map.map_latitude }}" 
                  data-longitude="{{ .Site.Params.google_map.map_longitude }}" 
-                 data-marker="{{ .Site.Params.google_map.map_marker }}" 
+                 data-marker="{{ .Site.Params.google_map.map_marker }}"
+                 data-api-key="{{ .Site.Params.google_map.map_api_key }}"
                  data-marker-name="Your Location" 
                  style="height: 400px; width: 100%;">
             </div>
@@ -200,7 +201,7 @@
           zoom: 15,
           mapId: "8f51c45b7cd9a219"
         });
-
+    
         const marker = new AdvancedMarkerElement({
           map: mapInstance,
           position: { 
@@ -210,31 +211,15 @@
           title: mapElement.dataset.markerName
         });
       }
-
+    
       // Initialize the Maps loader
-      const loader = new Promise((resolve) => {
-        const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.google_map.map_api_key }}&v=weekly`;
-        script.async = true;
-        script.onload = resolve;
-        document.head.appendChild(script);
-      });
-
-      // Wait for both DOM and Maps API to be ready
-      Promise.all([
-        new Promise(resolve => {
-          if (document.readyState !== 'loading') {
-            resolve();
-          } else {
-            document.addEventListener('DOMContentLoaded', resolve);
-          }
-        }),
-        loader
-      ]).then(() => {
-        initMap();
-      }).catch(err => {
-        console.error('Error initializing map:', err);
-      });
+      const mapElement = document.getElementById("map");
+      const apiKey = mapElement.dataset.apiKey;
+      const script = document.createElement('script');
+      script.src = "https://maps.googleapis.com/maps/api/js?key=" + apiKey + "&v=weekly";
+      script.async = true;
+      document.head.appendChild(script);
+      script.onload = initMap;
     </script>
   {{ end }}
   <!-- /Map Section -->
