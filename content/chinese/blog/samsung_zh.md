@@ -10,7 +10,7 @@ keywords: "手機AI,知識型工作者生產力工具,企業流動解決方案,S
 ## 引言
 人工智能（AI）與流動通訊的結合標誌著范式轉變，智能手機從單純裝置蛻變為智能夥伴。Samsung最新推出的Galaxy A56 5G及A36 5G，搭載**超凡智能（Awesome Intelligence）**，正是此演變的最佳寫照。本文將探討這些裝置的AI功能如何重塑流動通訊、提升知識型工作者生產力，並為企業提供創新解決方案。
 
-{{< image src="images/gallery/samsung.jpg" caption="Samsung Galaxy A56 5G" alt="Samsung Galaxy A56 5G" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="Samsung Galaxy A56 5G" webp="false" >}}
+{{< image src="/images/gallery/samsung.jpg" caption="Samsung Galaxy A56 5G" alt="Samsung Galaxy A56 5G" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="Samsung Galaxy A56 5G" webp="false" >}}
 
 ## AI如何改變流動通訊
 
@@ -20,7 +20,7 @@ Galaxy A系列強化的**畫圈即搜（Circle to Search）**功能，利用AI�
 ### 2. **AI驅動的攝影創新**
 - **最佳臉部表情（Best Face）**：自動從群體照片中挑選最佳表情，確保團隊合作或客戶簡報的專業影像質素。
 - **夜拍模式（Nightography）及低光表現**：支援在昏暗環境下清晰拍攝，適用於實地考察或夜間會議記錄。
-- **物件橡皮擦（Object Eraser）**：移除照片中的干擾元素，提升報告或簡報的視覺內容，無需依賴手動編輯工具。
+- **物件橡皮擦（Object Eraser）**：移除照片中的干據元素，提升報告或簡報的視覺內容，無需依賴手動編輯工具。
 
 ### 3. **強化保安與私隱**
 獲最高安全認證（EAL5+）的Samsung Knox Vault，利用硬件加密保護敏感數據。**自動封鎖（Auto Blocker）**及**失竊防護（Theft Detection）**等功能，為處理機密資訊的企業提供企業級保護。
