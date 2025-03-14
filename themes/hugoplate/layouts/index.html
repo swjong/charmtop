@@ -142,7 +142,7 @@
   {{ end }}
   <!-- /Testimonials -->
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   {{ with site.GetPage "sections/contact" }}
     {{ if .Params.enable }}
       <section class="section">
@@ -156,10 +156,9 @@
                 {{ .Params.description | markdownify }}
               </p>
               <div class="contact-info">
-                <p>Email Address: <a href="mailto:{{ .Params.contact.email }}">{{ .Params.contact.email }}</a></p>
-
-                <p>Phone: <a href="tel:{{ .Params.contact.phone }}">{{ .Params.contact.phone }}</a></p>
-                <p>Address: {{ .Params.contact.address }}</p>
+                <p>Email Address: <a href="mailto:{{ .Params.contact.email }}" class="text-blue-500">{{ .Params.contact.email }}</a></p>
+                <p>Phone: <a href="tel:{{ .Params.contact.phone }}" class="text-blue-500">{{ .Params.contact.phone }}</a></p>
+                <p>Address: <span class="text-blue-500">{{ .Params.contact.address }}</span></p>
               </div>
             </div>
           </div>
@@ -167,5 +166,76 @@
       </section>
     {{ end }}
   {{ end }}
-  <!-- /Contact -->
+  <!-- /Contact Section -->
+
+  <!-- Map Section -->
+  {{ if .Site.Params.google_map.enable }}
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div id="map" 
+                 data-latitude="{{ .Site.Params.google_map.map_latitude }}" 
+                 data-longitude="{{ .Site.Params.google_map.map_longitude }}" 
+                 data-marker="{{ .Site.Params.google_map.map_marker }}" 
+                 data-marker-name="Your Location" 
+                 style="height: 400px; width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      async function initMap() {
+        const { Map } = await google.maps.importLibrary("maps");
+        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+        
+        const mapElement = document.getElementById("map");
+        const mapInstance = new Map(mapElement, {
+          center: { 
+            lat: parseFloat(mapElement.dataset.latitude), 
+            lng: parseFloat(mapElement.dataset.longitude) 
+          },
+          zoom: 15,
+          mapId: "8f51c45b7cd9a219"
+        });
+
+        const marker = new AdvancedMarkerElement({
+          map: mapInstance,
+          position: { 
+            lat: parseFloat(mapElement.dataset.latitude), 
+            lng: parseFloat(mapElement.dataset.longitude) 
+          },
+          title: mapElement.dataset.markerName
+        });
+      }
+
+      // Initialize the Maps loader
+      const loader = new Promise((resolve) => {
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.google_map.map_api_key }}&v=weekly`;
+        script.async = true;
+        script.onload = resolve;
+        document.head.appendChild(script);
+      });
+
+      // Wait for both DOM and Maps API to be ready
+      Promise.all([
+        new Promise(resolve => {
+          if (document.readyState !== 'loading') {
+            resolve();
+          } else {
+            document.addEventListener('DOMContentLoaded', resolve);
+          }
+        }),
+        loader
+      ]).then(() => {
+        initMap();
+      }).catch(err => {
+        console.error('Error initializing map:', err);
+      });
+    </script>
+  {{ end }}
+  <!-- /Map Section -->
 {{ end }}

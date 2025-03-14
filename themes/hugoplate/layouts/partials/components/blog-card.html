@@ -1,34 +1,33 @@
 <div class="bg-body dark:bg-darkmode-body">
-  {{ $image:= .Params.image }}
+  <!-- Add debug info -->
+  <div style="display: none;">
+    Language: {{ .Lang }}
+    Summary Length: {{ site.Params.summary_length }}
+    Chinese Summary Length: {{ site.Params.chinese_summary_length }}
+  </div>
+  {{ $image := .Params.image }}
   {{ if $image }}
-    {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "mb-6 w-full rounded") }}
+    <img
+      class="mb-6 w-full rounded"
+      src="{{ $image | relURL }}"
+      alt="{{ .Title }}"
+      width="445"
+      height="230"
+    />
   {{ end }}
   <h4 class="mb-3">
     <a href="{{ .RelPermalink }}">
       {{ .Title }}
     </a>
   </h4>
-  {{ $categories:= .Params.categories }}
-  {{ if $categories }}
-    <ul class="mb-4">
-              </a>
-      </li>
-      <li class="mr-4 inline-block">
-        <i class="fa-regular fa-folder mr-1"></i>
-        {{ range $i,$p:= $categories }}
-          <a
-            href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/"
-            class="ms-1"
-            >{{ . | humanize }}{{ if ne $i (sub (len $categories) 1) }}
-              {{ "," }}
-            {{ end }}
-          </a>
-        {{ end }}
-      </li>
-    </ul>
-  {{ end }}
-  <p class="mb-6">{{ .Summary }}</p>
-  <a class="btn btn-outline-primary btn-sm" href="{{ .RelPermalink }}">
-    {{ T "read_more" }}
+  <p class="mb-6">
+    {{ if eq .Lang "zh" }}
+      {{ .Plain | truncate 180 "..." }}
+    {{ else }}
+      {{ .Plain | truncate 120 "..." }}
+    {{ end }}
+  </p>
+  <a class="btn btn-primary btn-sm" href="{{ .RelPermalink }}">
+    {{ i18n "read_more" }}
   </a>
 </div>

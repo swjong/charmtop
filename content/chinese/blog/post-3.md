@@ -1,23 +1,48 @@
 ---
-title: "How to build an Application with modern Technology"
-meta_title: ""
-description: "this is meta description"
-date: 2022-04-04T05:00:00Z
-image: "/images/image-placeholder.png"
-categories: ["Software"]
-author: "John Doe"
-tags: ["software", "tailwind"]
-draft: false
+title: "特朗普Stargate計畫與mRNA疫苗癌症治療進展"
+date: 2025-02-05T00:00:00Z
+description: "文章介紹特朗普宣佈的Stargate計畫，以及mRNA疫苗在癌症治療等方面的研究進展、藥企股價表現和計畫融資可行性。"
+categories:
+  - 醫療健康
+  - 科技項目
+  - 金融投資
+tags:
+  - Stargate計畫
+  - mRNA疫苗
+  - 癌症治療
+  - 癌症篩查
+  - 藥企股價
+  - 融資
+  - AI基建
 ---
 
-Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+特朗普上任美國總統，隨即宣佈耗資5000億美元Stargate計畫，投資者包括軟庫、Oracle和OpenAI等。
+Stargate擬在德州興建全球最大AI基建，據Oracle創辦人Larry Ellison表示，Stargate項目的目標之一，乃集合美國人健康數據，透過ＡＩ和大數據，從血液樣本快速篩查早期癌症，然後48小時內設計個人化mRNA癌症疫苗治療。
+Stargate提出發展mRNA疫苗治療，原因之一是亞太和歐洲發展迅速，美國須急起直追。
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+## 核糖核酸疫苗潛力驚人
+多年來，科學家一直研究利用「信使核糖核酸」（mRNA）技術新型療法，終於在疫情期間大規模應用。莫德納（Moderna）、輝瑞和BioNTech研發出mRNA新冠疫苗。mRNA療法激發人體免疫系統產生COVID－19抗體，原理上亦可抗癌和罕見病，激發免疫系統攻擊腫瘤細胞，或補充缺失或功能異常蛋白質，從而治療罕見病。
 
-## Creative Design
+不過，上述３家藥廠股價，疫情之後表現各異，疫苗需求下跌，莫德納無以為繼，去年股價跌去一半。Stargate計畫公佈後，莫德納短暫上升後回軟。輝瑞保持與德國BioNTech的合作，股價仍跑輸大市。BioNTech在新冠一役成名後，集中火力研究癌症，收購有潛力初創。去年底BioNTech收購中國珠海的普米斯生物技術(Biotheus)，獲得雙方聯合開發的PD-L1/VEGF雙特異性抗體BNT327抗癌類藥物，有望對抗多項固態腫瘤，股價表現堅挺。
 
-Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+雙特異性抗體以臨床三期的Summit Therapeutics新藥最具潛力，臨床數據顯示對晚期肺癌療效，遠勝Merck的PD-1單抗抑制藥物Keytruda，Merck因此股價受壓。BioNTech打算結合mRNA癌症免疫療法到BNT327，市場寄望甚殷，股價一直受追捧。
 
-> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+## 研究實力此消彼長
+多家美國藥廠mRNA成果仍乏善足陳，莫德納資金又瀕於耗盡，仍未實現盈利。現時mRNA研究已轉而集中到中國、印度、英國和德國等。
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+據Transparency Market Research報導，全球進入臨床mRNA抗癌疫苗約有60種，23種位於中國，與美國相若，主要屬於治療性疫苗。
+
+亞洲區科技強勁，部分癌症血液篩查技術亦源自香港，新任中大校長盧煜明是率先破解血漿DNA密碼的研究人員，曾創立Cirina開發出血漿測試診斷癌症，結果2017年獲Grail以3億美元收購，Grail再被Illumina以71億美元收購，發展出血液提取血漿游離DNA的癌症篩查技術的Galleri，成為最流行檢測手段。不過，Illumina收購後受監管問題困擾，結果被迫分拆Grail，蒙受嚴重虧損。
+
+本港仍在通過血漿游離DNA篩查癌症研究，盧煜明與Prenetics成立了Insighta，正以「FRAGMA」技術發展多種癌症的早期篩查。
+
+## 錢從可來耐人尋味
+美國Stargate有望加快篩查癌症技術和mRNA研究，Ellison聲稱以生成式ＡＩ及大數據，４８小時內推出個人化癌症疫苗，以推動美國成全球癌症治療中心。
+
+但是撇開研究成熟度，不少投資人士對Stargate達5000億美元融資的財務可行性，亦深感懷疑。
+
+軟庫行政總裁孫正義表示擬投資2000億美元在Stargate上，美國資深投資人士Gavin Baker指，軟庫手頭現金只有380億美元，自由現金流25億美元，持有的ARM股份值1430億美元，阿里巴巴股份值180億美元，負債1420億美元。即使出售手頭股份，軟庫亦難以籌集足夠資金，OpenAI正尋求融資，據聞投資者亦是軟庫，問題在於，錢從何來？
+
+Oracle手頭現金有110億美元，負債880億美元，自由現金流100億美元。另一家參與基金MGX正管理1000億美元，最多只能分配100億美元投資到Stargate。
+
+美國多家科企已打退堂鼓，加上DeepSeek R1橫空出世後，ＡＩ算力可能過剩，美國的Stargate大計，其實充滿變數。

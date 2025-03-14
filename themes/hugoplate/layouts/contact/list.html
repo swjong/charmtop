@@ -112,9 +112,33 @@
   {{ end }}
 
   {{ if site.Params.google_map.enable }}
-    {{ $gmap:= resources.Get "plugins/maps/google-map.js" }}
-    <script defer src="{{ $gmap.RelPermalink }}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key={{ site.Params.google_map.map_api_key }}&libraries=places"></script>
-  {{ end }}
+    <script>
+      function initMap() {
+        const mapElement = document.getElementById("map");
+        const mapInstance = new google.maps.Map(mapElement, {
+          center: { 
+            lat: {{ site.Params.google_map.map_latitude }}, 
+            lng: {{ site.Params.google_map.map_longitude }} 
+          },
+          zoom: 15,
+        });
 
+        const marker = new google.maps.Marker({
+          map: mapInstance,
+          position: { 
+            lat: {{ site.Params.google_map.map_latitude }}, 
+            lng: {{ site.Params.google_map.map_longitude }} 
+          },
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key={{ site.Params.google_map.map_api_key }}&callback=initMap`;
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+      });
+    </script>
+  {{ end }}
 {{ end }}

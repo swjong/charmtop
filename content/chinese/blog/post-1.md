@@ -1,17 +1,17 @@
 ---
 title: "利用視覺運算協助監察"
-meta_title: ""
+meta_title: "視覺運算在監察中的應用 | Charmtop"
 description: "介紹視覺運算的應用場景和優點"
-date: 2024-08-04T05:00:00Z
-image: "/images/dbcoastline.png"
+date: 2025-01-04T05:00:00Z
+image: "/images/image-placeholder.png"
 categories: ["Artificial intelligence", "Computer vision"]
-# author: "John Doe"
+author: "SW Jong"
 tags: ["視覺運算", "computer vision", "Artificial Intelligence", "Surveillance", "Object Detection"]
 draft: false
 ---
 ## 視覺運算是甚麼？
 
-**視覺運算** 是**人工智能 (AI)**的分支技術計算機能理解和理解視頻中視覺資訊，並作出反應。視覺運算應用在**物業保安**可分析視頻源並檢測各種活動，自動檢測出可疑活動，大大減少人手消耗，例如：:
+>視覺運算是人工智能 (AI)的分支技術計算機能理解和理解視頻中視覺資訊，並作出反應。視覺運算應用在**物業保安**可分析視頻源並檢測各種活動，自動檢測出可疑活動，大大減少人手消耗。
 <hr>
 
 
@@ -29,7 +29,7 @@ draft: false
 能夠同時追蹤多個物體（例如: 人、車輛、動物）在多個攝影機和區域中移動。
 <hr>
 
-## 為什麼 5G 簡化視覺運臬的部署?
+## 為什麼 5G 簡化視覺運算的部署?
 
 當前的監控視覺運算(Computer Vision) 已經發展成強大協作工具，加上5G網絡速度、可靠性和低延遲結合，效果更為顯著。我們與中國移動 (China Mobile Hong Kong, CMHK) 在香港進行多次部署合作：
 

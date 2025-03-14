@@ -1,0 +1,5 @@
+{{ $summary_length := site.Params.summary_length }}
+{{ if eq .Language.Lang "zh" }}
+    {{ $summary_length = site.Params.chinese_summary_length }}
+{{ end }}
+{{ .Summary | truncate $summary_length "..." }}
