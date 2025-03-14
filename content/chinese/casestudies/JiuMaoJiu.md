@@ -18,7 +18,7 @@ description: this is meta description
 ---
 ### 零售業利用視覺運算進行人數點算，以及顯示屏作人流管理
 
-{{< slider dir="images/gallery" class="max-w-[300px] ml-0" height="200" width="350" webp="true" command="Fit" option="" zoomable="true" >}}
+{{< gallery dir="images/gallery" class="" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
 
   
 lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.

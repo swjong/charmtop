@@ -16,7 +16,7 @@ logo_text = "Charmtop"
 navbar_fixed = true
 # theme-mode
 theme_switcher = true
-theme_default = "system" # available options [light/dark/system]
+theme_default = "light" # changed from "system" to "light"
 # Main Sections
 mainSections = ["blog"]
 # Summary length settings
