@@ -7,15 +7,14 @@
         {{ range .RegularPages }}
           <div class="lg:col-4 md:col-6">
             <div class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg p-8 text-center">
-              {{ if .Params.image }}
-                <img
-                  class="mx-auto mb-6 h-20"
-                  src="{{ .Params.image | absURL }}"
-                  alt="{{ .Title }}"
-                  width="80"
-                  height="80"
-                />
-              {{ end }}
+              <!-- Replace service icon with placeholder image -->
+              <img
+                class="mx-auto mb-6 rounded-lg h-48 w-auto"
+                src="/images/services/services.png"
+                alt="{{ .Title }}"
+                width="300"
+                height="150"
+              />
               <h4 class="mb-3">
                 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
               </h4>
