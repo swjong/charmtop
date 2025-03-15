@@ -1,0 +1,64 @@
+<header class="header py-0.5">
+  <nav class="navbar container">
+    <div class="order-0">
+      <a class="navbar-brand block" href="{{ site.BaseURL | relLangURL }}">
+        {{ partial "logo" (dict "Source" site.Params.logo "Class" "h-6 md:h-8" ) }}
+      </a>
+    </div>
+    <div class="order-1">
+      <ul class="flex space-x-4">
+        {{ range site.Menus.main }}
+          <li class="nav-item py-1">
+            <a class="nav-link" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="order-2 flex items-center">
+      <!-- Language Switcher -->
+      {{ if site.IsMultiLingual }}
+        <div class="language-switcher ml-4">
+          <!-- Hardcoded language switcher that will always appear -->
+          {{ if eq .Language.Lang "en" }}
+            <a href="/zh/" class="text-dark dark:text-white font-medium">中文</a>
+          {{ else }}
+            <a href="/en/" class="text-dark dark:text-white font-medium">English</a>
+          {{ end }}
+        </div>
+      {{ end }}
+      <!-- Theme Switcher -->
+      {{ partial "theme-switcher" . }}
+    </div>
+  </nav>
+</header>
+<script>
+  function initMap() {
+    const loader = new google.maps.plugins.loader.Loader({
+      apiKey: document.getElementById("map").dataset.apiKey,
+      version: "weekly",
+      libraries: ["maps", "marker"]
+    });
+
+    loader.load().then(() => {
+      const mapElement = document.getElementById("map");
+      const map = new google.maps.Map(mapElement, {
+        center: { 
+          lat: parseFloat(mapElement.dataset.latitude), 
+          lng: parseFloat(mapElement.dataset.longitude) 
+        },
+        zoom: 15,
+        mapId: "8f51c45b7cd9a219"
+      });
+
+      const marker = new google.maps.marker.AdvancedMarkerElement({
+        map: map,
+        position: { 
+          lat: parseFloat(mapElement.dataset.latitude), 
+          lng: parseFloat(mapElement.dataset.longitude) 
+        },
+        title: mapElement.dataset.markerName
+      });
+    });
+  }
+</script>
+<script async src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
