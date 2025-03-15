@@ -1,14 +1,14 @@
 {{ define "main" }}
   <!-- Banner -->
   {{ with .Params.banner }}
-    <section class="section pt-2">
+    <section class="section pt-14">
       <div class="container">
         <div class="row justify-center">
           <div class="lg:col-7 md:col-9 mb-8 text-center">
             <h1 class="mb-4 text-h3 lg:text-h1">
               {{ .title | markdownify }}
             </h1>
-            <p class="mb-3">
+            <p class="mb-8">
               {{ .content | markdownify }}
             </p>
             {{ with .button }}
@@ -26,7 +26,7 @@
             {{ end }}
           </div>
           <div class="col-12">
-            {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[400px]" "DisplayXL" "400x" ) }}
+            {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px]" "DisplayXL" "800x" ) }}
           </div>
         </div>
       </div>
@@ -227,5 +227,6 @@
   {{ end }}
   <!-- /Map Section -->
 
-  <!-- Remove duplicate latest-posts partial -->
+  <!-- Add latest blog posts section -->
+  {{ partial "latest-posts" . }}
 {{ end }}
