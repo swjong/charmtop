@@ -1,5 +1,6 @@
 ---
 title: "AI革新流動通訊：Samsung Galaxy A56 5G及A36 5G如何提升知識型工作者及企業效率"
+image: "/images/SamsungGalaxy.jpg"
 date: 2025-03-14
 category: "科技,AI,流動通訊"
 tags: ["#AI", "#流動科技", "#生產力工具", "#企業方案", "#SamsungGalaxyA565G", "#SamsungGalaxyA365G"]
