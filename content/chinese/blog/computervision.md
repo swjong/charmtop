@@ -1,5 +1,6 @@
 ---
 title: "利用智能鏡頭加入終端 AI 作視覺運算的好處、成本分析及未來趨勢"
+image: "/images/computer-vision-64.jpeg"
 date: 2025-01-24T15:09:17+08:00
 meta_title: "智能鏡頭與終端 AI 視覺運算的優勢與趨勢 | Charmtop"
 description: "Explore the benefits, cost analysis, and future trends of integrating AI with smart cameras for visual computing."

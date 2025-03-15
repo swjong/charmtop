@@ -14,29 +14,17 @@ keywords:
   - "maritime boundary protection"
 categories: ["Security Solutions", "AI Technology"]
 tags: ["coastal security", "AI monitoring", "intrusion detection"]
-# email: johndoe@email.com
-social:
-#  - name: github
-#    icon: fa-brands fa-github
-#    link: https://github.com
-#
-#  - name: twitter
-#    icon: fa-brands fa-twitter
-#    link: https://twitter.com
-#
-#  - name: linkedin
-#    icon: fa-brands fa-linkedin
-#    link: https://linkedin.com
 ---
-### 從海岸以長焦鏡頭監察闖人邊界的船隻
+### Monitoring Coastal Vessel Intrusions Using Long-Range Telephoto Lenses
 
-{{< image src="images/dbcoastline.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+{{< image src="images/dbcoastline.png" caption="" alt="Coastal Surveillance System" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="Discovery Bay Coastal Monitoring"  webp="false" >}}
 
 <hr>
 
-### 視覺運算可以進行多目標監察，成本愈來愈低
+### Visual Computing Enables Multi-Target Surveillance with Decreasing Costs
 
 {{< gallery dir="images/dbay" class="" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
 
 <hr>
-利用視覺運算，可以即時透過視像鏡頭監察現場，並且通過5G傳送到數據中心辨認目標或可疑人物，並發出警示即時行動。此方案已應用在香港屋苑，全天候監視海岸，遇到有闖入之船隻馬上作出通知，成功堵截多次非法闖入。
+
+Using visual computing technology, real-time surveillance through video cameras can monitor the site and transmit data to a processing center via 5G networks for target identification and suspicious activity detection, triggering immediate alerts for action. This solution has been successfully implemented in Hong Kong residential estates, providing 24/7 coastal monitoring. When unauthorized vessels attempt to intrude, the system immediately notifies security personnel, resulting in successful prevention of multiple illegal entry attempts.

@@ -3,7 +3,7 @@ title: "利用視覺運算協助監察"
 meta_title: "視覺運算在監察中的應用 | Charmtop"
 description: "介紹視覺運算的應用場景和優點"
 date: 2025-01-04T05:00:00Z
-image: "/images/image-placeholder.png"
+image: "/images/computer-vision-64.jpeg"
 categories: ["Artificial intelligence", "Computer vision"]
 author: "SW Jong"
 tags: ["視覺運算", "computer vision", "Artificial Intelligence", "Surveillance", "Object Detection"]
@@ -28,6 +28,10 @@ draft: false
 5. **多目標追蹤 (Multi-object Tracking)**: 
 能夠同時追蹤多個物體（例如: 人、車輛、動物）在多個攝影機和區域中移動。
 <hr>
+<div class="image-container text-center my-8">
+  <img src="/images/dbcoastline.png" alt="S960 Ultra-High-Strength Steel Bridge" class="mx-auto rounded-lg max-w-full md:max-w-[80%] lg:max-w-[70%]">
+  <p class="text-sm mt-2 text-gray-600 italic">利用遠程鏡頭監察海岸線闖入船隻</p>
+</div>
 
 ## 為什麼 5G 簡化視覺運算的部署?
 
