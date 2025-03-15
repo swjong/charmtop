@@ -1,5 +1,5 @@
 ---
-title: "鋼材在現代建築中的應用與創新"
+title: "高強鋼在現代基建應用與創新"
 image: "/images/construction.jpg"
 meta_title: "鋼材應用與創新技術 | 現代建築解決方案"
 date: 2024-03-15T12:00:00+08:00
@@ -18,6 +18,10 @@ draft: false
 ## 香港建造業的新變革
 
 香港特別行政區建造業正面臨多重挑戰，包括高昂的建造成本、保守的設計標準、工人老化、人手短缺、物料供應不穩定以及施工工序對人力的高需求等。為了突破這些瓶頸，香港特區政府積極推動業界採用高效建築技術，力求輕量化設計，並善用預製方式，以提升工務工程經濟效益，降低建造成本。
+<div class="image-container text-center my-8">
+  <img src="/images/steel.jpg" alt="S960 Ultra-High-Strength Steel Bridge" class="mx-auto rounded-lg max-w-full md:max-w-[80%] lg:max-w-[70%]">
+  <p class="text-sm mt-2 text-gray-600 italic">全球首例S960超高強度跨河人行鋼橋在新中國成立75週年之際成功合攏</p>
+</div>
 
 ### 超高強度結構鋼的特性
 

@@ -5,11 +5,11 @@
     Summary Length: {{ site.Params.summary_length }}
     Chinese Summary Length: {{ site.Params.chinese_summary_length }}
   </div>
-  {{ $image := .Params.image }}
-  {{ if $image }}
+  <!-- Check image handling -->
+  {{ if .Params.image }}
     <img
       class="mb-6 w-full rounded"
-      src="{{ $image | relURL }}"
+      src="{{ .Params.image | relURL }}"
       alt="{{ .Title }}"
       width="445"
       height="230"
@@ -28,6 +28,6 @@
     {{ end }}
   </p>
   <a class="btn btn-primary btn-sm" href="{{ .RelPermalink }}">
-    {{ i18n "read_more" }}
+    {{ i18n "read_more" | default "Read More" }}
   </a>
 </div>

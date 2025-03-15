@@ -1,5 +1,6 @@
 ---
 title: "AI重塑保險業格局：虛擬保險如何推動創新療法普及？以Bowtie與港怡醫院合作引入Histotripsy為例"
+image: "/images/bowtie.png"
 date: 2025-03-14
 category: "保險科技,醫療創新,AI應用"
 tags: ["#AI保險", "#虛擬保險", "#組織碎化技術", "#肝癌治療", "#Bowtie", "#港怡醫院"]

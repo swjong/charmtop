@@ -1,1 +1,6 @@
-our_services: "專業服務"
+- id: read_more
+  translation: "閱讀更多"
+- id: view_all_posts
+  translation: "查看所有文章"
+- id: our_services
+  translation: "專業服務"
