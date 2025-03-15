@@ -26,6 +26,11 @@ Ultra-high-strength structural steel is increasingly used in building and bridge
 - **Corrosion Resistance**: Excellent corrosion resistance extends the service life of steel structures, reducing the need for maintenance and replacement, thus lowering lifecycle costs.
 - **Safety**: High-strength steel provides better seismic resistance, enhancing the safety of structures.
 
+<div class="image-container text-center my-8">
+  <img src="/images/steel.jpg" alt="S960 Ultra-High-Strength Steel Bridge" class="mx-auto rounded-lg max-w-full md:max-w-[80%] lg:max-w-[70%]">
+  <p class="text-sm mt-2 text-gray-600 italic">The world's first S960 ultra-high-strength pedestrian bridge over a river successfully completed its closure on the 75th anniversary of the founding of the People's Republic of China</p>
+</div>
+
 ### Innovative Application Examples
 
 The Tseung Kwan O Cross Bay Link in Hong Kong efficiently utilized S690 high-strength steel, employing advanced welding techniques and non-destructive testing to ensure construction quality, reduce structural weight, and lower construction and maintenance costs. The Macau Bridge successfully applied Q690 high-strength steel, achieving on-site assembly, improving work efficiency, reducing carbon emissions, and promoting sustainable development.
