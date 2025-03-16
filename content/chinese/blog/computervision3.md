@@ -3,21 +3,21 @@ title: "利用智能鏡頭加入終端 AI 作視覺運算的好處、成本分�
 date: 2025-01-24T15:09:17+08:00
 meta_title: "智能鏡頭與終端 AI 視覺運算的優勢與趨勢 | Charmtop"
 description: "Explore the benefits, cost analysis, and future trends of integrating AI with smart cameras for visual computing."
-image: "/images/avatar.png"
+image: "/images/cvimages.jpeg"
 categories: ["Technology", "Computer vision", "Data"]
 author: "swjong"
 tags: ["AI", "smart cameras","視覺技術", "Visual computing", "technology trends", "privacy", "cost analysis"]
 draft: false
 ---
-v
->不少智能鏡頭加入終端AI芯片，可以獨立作視覺運算，其中有不少優點。
+
+不少智能鏡頭加入終端AI芯片，可以獨立作視覺運算，其中有不少優點。
 
 
-## 第一節
+## 新一代AI鏡頭興起
 
 智能鏡頭加入終端AI芯片，可以獨立作視覺運算，其中有不少優點。
 
-## 引言
+## 優勢分析
 視覺技術快速發展，AI視覺運算應用越來越廣泛。傳統上，視覺運算多在後端進行推論，但隨著技術進步，利用智能鏡頭加入終端 AI 作視覺運算呈現出獨特的優勢，尤其是智能鏡頭加入終端AI。
 ## 即時性
 終端 AI 視覺運算無需將數據傳輸到後端，能在本地即時處理，NTI 視覺運算，只需在大華鏡頭終端集成 AI 芯片等，硬件成本相對較低。

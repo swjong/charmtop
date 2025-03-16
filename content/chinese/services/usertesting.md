@@ -1,5 +1,5 @@
 ---
-title: "AI與硬體協作效率研究"
+title: "AI與硬體效率研究"
 date: 2025-03-12T14:30:00+08:00
 author: "swjong"
 categories: ["服務案例", "技術研究"]

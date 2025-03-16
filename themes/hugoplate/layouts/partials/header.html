@@ -1,15 +1,15 @@
-<header class="header py-0.5">
-  <nav class="navbar container">
+<header class="header py-0">
+  <nav class="navbar container max-w-[90%]">
     <div class="order-0">
       <a class="navbar-brand block" href="{{ site.BaseURL | relLangURL }}">
-        {{ partial "logo" (dict "Source" site.Params.logo "Class" "h-6 md:h-8" ) }}
+        {{ partial "logo" (dict "Source" site.Params.logo "Class" "h-2 md:h-4" ) }}
       </a>
     </div>
     <div class="order-1">
-      <ul class="flex space-x-4">
+      <ul class="flex space-x-2">
         {{ range site.Menus.main }}
           <li class="nav-item py-1">
-            <a class="nav-link" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+            <a class="nav-link px-2" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
           </li>
         {{ end }}
       </ul>

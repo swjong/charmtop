@@ -4,17 +4,34 @@
 
   <section class="section">
     <div class="container">
-      <ul class="text-center">
+      <div class="row gy-4 justify-center">
         {{ range .RegularPages }}
-          <li class="m-3">
-            <a
-              href="{{ .Permalink }}"
-              class="text-dark dark:text-darkmode-dark block text-xl">
-              {{ .Title }}
-            </a>
-          </li>
+          <div class="lg:col-4 md:col-6">
+            <div class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg p-6 h-full flex flex-col">
+              <!-- Featured Image -->
+              <div class="mb-4 aspect-video overflow-hidden rounded-lg">
+                {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "w-full h-full object-cover") }}
+              </div>
+              
+              <!-- Content -->
+              <div class="flex-grow">
+                <h4 class="mb-3 h-16 line-clamp-2">
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h4>
+                <p class="mb-4 h-20 line-clamp-3">{{ .Summary }}</p>
+              </div>
+              
+              <!-- Footer -->
+              <div class="mt-auto">
+                <a class="btn btn-primary btn-sm" href="{{ .RelPermalink }}">
+                  Read More
+                  <i class="fa fa-arrow-right pl-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         {{ end }}
-      </ul>
+      </div>
     </div>
   </section>
 {{ end }}

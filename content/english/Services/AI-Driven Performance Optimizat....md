@@ -1,5 +1,5 @@
 ---
-title: "Study on AI and Hardware Collaboration Efficiency"
+title: "AI and Productivity for Knowledge Workers"
 date: 2025-03-12T14:30:00+08:00
 author: "swjong"
 categories: ["Service Cases", "Technical Research"]
