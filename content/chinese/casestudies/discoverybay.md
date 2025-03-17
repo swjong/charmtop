@@ -1,7 +1,7 @@
 ---
 title: 利用AI監察非法闖人
-# email: johndoe@email.com
-image: "/images/avatar.png"
+email: IT@charmtop.com.hk
+image: "images/dbcoastline.png"
 description: this is meta description
 social:
 #  - name: github

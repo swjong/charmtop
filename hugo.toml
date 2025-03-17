@@ -1,6 +1,6 @@
 ######################## default configuration ####################
 # The base URL of your site (required). This will be prepended to all relative URLs.
-baseURL = "https://production.d35tuqruih9xrf.amplifyapp.com"
+baseURL = "http://localhost:1313"
 # Title of your website (required).
 title = "Charmtop"
 # Your theme name

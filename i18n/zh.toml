@@ -1,0 +1,33 @@
+# Navigation
+[navigation_button_label]
+other = "聯絡我們"
+
+[services]
+other = "服務項目"
+
+[blog]
+other = "博客"
+
+[contact]
+other = "聯絡我們"
+
+# Common UI elements
+[read_more]
+other = "了解更多"
+
+[learn_more]
+other = "了解更多"
+
+[search]
+other = "搜索"
+
+# Breadcrumb
+[home]
+other = "主頁"
+
+# Pagination
+[prev]
+other = "上一頁"
+
+[next]
+other = "下一頁"

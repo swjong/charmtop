@@ -6,7 +6,11 @@
 <ul class="{{ $class }} inline-flex space-x-1 capitalize">
   <li>
     <a class="text-primary dark:text-darkmode-primary" href="{{ $base }}">
-      {{ T "home" | default "Home" }}
+      {{ if eq site.Language.Lang "en" }}
+        Home
+      {{ else }}
+        {{ T "home" | default "Home" }}
+      {{ end }}
     </a>
     <span class="inlin-block mr-1">/</span>
   </li>

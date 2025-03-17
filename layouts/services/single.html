@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="md:col-10 lg:col-6 mx-auto">
+        <h2 class="h3 mb-6">{{ .Title }}</h2>
+        <div class="content">{{ .Content }}</div>
+        
+        <!-- Custom button with translation -->
+        <a href="{{ "contact" | relLangURL }}" class="btn btn-primary mt-6">
+          {{ i18n "navigation_button_label" | default "Contact Us" }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

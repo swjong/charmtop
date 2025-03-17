@@ -1,5 +1,5 @@
 ---
-title: "Charmtop Consultants Limited"
+title: "Who We Are"
 meta_title: "About"
 description: "Charmtop is an IT integration company"
 image: "/images/avatar.png"

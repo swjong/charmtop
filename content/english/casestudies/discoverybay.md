@@ -1,7 +1,8 @@
 ---
-title: "Using AI to Monitor Illegal Coastal Intrusions | Charmtop Security Solutions"
+title: "Using AI to Monitor Illegal Coastal Intrusions"
+email: IT@charmtop.com.hk
+image: "images/dbcoastline.png"
 description: "Advanced AI-powered surveillance system using telephoto lenses and 5G technology to detect and prevent unauthorized vessel intrusions along coastlines."
-image: "/images/avatar.png"
 date: 2023-09-15T10:00:00+08:00
 draft: false
 keywords:

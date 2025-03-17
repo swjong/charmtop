@@ -1,25 +1,16 @@
 {{ define "main" }}
-  {{ partial "page-header" . }}
-
-  <section class="section">
-    <div class="container">
-      <div class="row gy-4 justify-center">
-        {{ range .RegularPages }}
-          <div class="lg:col-4 md:col-6">
-            <div class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg p-6">
-              {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "mb-6 rounded-lg") }}
-              <h4 class="mb-3">
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-              </h4>
-              <p class="mb-6">{{ .Summary }}</p>
-              <a class="btn btn-primary btn-sm" href="{{ .RelPermalink }}">
-                Read More
-                <i class="fa fa-arrow-right pl-2"></i>
-              </a>
-            </div>
-          </div>
+  <main class="container">
+    <article>
+      <h1>{{ .Title }}</h1>
+      <div class="content">
+        {{ .Content }}
+      </div>
+      <div class="posts">
+        {{ range .Paginator.Pages }}
+          {{ .Render "summary" }}
         {{ end }}
       </div>
-    </div>
-  </section>
+      {{ template "_internal/pagination.html" . }}
+    </article>
+  </main>
 {{ end }}

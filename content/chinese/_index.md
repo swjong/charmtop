@@ -1,4 +1,6 @@
 ---
+title: "主頁"
+
 # Banner
 banner:
   title: "歡迎到訪創高顧問"

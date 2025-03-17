@@ -1,5 +1,7 @@
 ---
-title: "Retail and Restaurant Network & Video Surveillance Solutions | Charmtop"
+title: "Retail and Restaurant Video Surveillance"
+email: IT@charmtop.com.hk
+image: "images/retailmonitoring.jpeg"
 description: "Advanced network infrastructure and AI-powered video surveillance systems for retail stores and restaurants, offering people counting and crowd management solutions."
 date: 2023-10-12T09:00:00+08:00
 draft: false

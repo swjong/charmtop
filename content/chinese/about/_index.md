@@ -1,5 +1,5 @@
 ---
-title: "創高顧問有限公司"
+title: "關於我們"
 meta_title: "About"
 description: "Charmtop is an IT integration company"
 image: "/images/avatar.png"
