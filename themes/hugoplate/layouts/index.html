@@ -1,77 +1,40 @@
 {{ define "main" }}
-  <!-- Banner -->
-  {{ with .Params.banner }}
-    <section class="section pt-2">
-      <div class="container">
-        <div class="row justify-center">
-          <div class="lg:col-7 md:col-9 mb-8 text-center">
-            <h1 class="mb-4 text-h3 lg:text-h1">
-              {{ .title | markdownify }}
-            </h1>
-            <p class="mb-3">
-              {{ .content | markdownify }}
-            </p>
-            {{ with .button }}
-              {{ if .enable }}
-                <a class="btn btn-primary" href="{{ .link | absURL }}">
-                  {{ .label }}
-                  <i class="fa fa-arrow-right pl-2"></i>
-                </a>
-              {{ end }}
-            {{ end }}
-          </div>
-          <div class="col-12">
-            {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[400px]") }}
-          </div>
-        </div>
-      </div>
-    </section>
-  {{ end }}
-
-  <!-- Latest Posts -->
-  {{ partial "latest-posts" . }}
-
-  <!-- Features -->
-  {{ range $i, $e:= .Params.features }}
-    <section class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">
+  <!-- Featured Post -->
+  {{- range first 1 (shuffle (where .Site.RegularPages "Type" "blog")) -}}
+    <section class="section pt-14">
       <div class="container">
         <div class="row items-center justify-between">
-          <div class="mb:md-0 {{ if not (modBool $i 2) }}md:order-2{{ end }} md:col-5 mb-6">
-            {{ partial "image" (dict "Src" .image "Alt" "feature image") }}
+          <div class="lg:col-6 md:col-8 mb-8">
+            <h1 class="mb-4 text-h3 lg:text-h1">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h1>
+            <p class="mb-3">
+              {{ if eq .Lang "zh" }}
+                {{ $content := replaceRE "##.*\\n" "" .Plain }}
+                {{ $content := replaceRE "^##.*\\n" "" $content }}
+                {{ $content := replaceRE "\\n##.*" "" $content }}
+                {{ $content | truncate 200 }}
+              {{ else }}
+                {{ replaceRE "##\\s+.*\\n" "" .Plain | truncate 200 }}
+              {{ end }}
+            </p>
+            <a class="btn btn-primary" href="{{ .Permalink }}">
+              {{ i18n "read_more" }}
+              <i class="fa fa-arrow-right pl-2"></i>
+            </a>
           </div>
-          <div class="{{ if not (modBool $i 2) }}md:order-1{{ end }} md:col-7 lg:col-6">
-            <h2 class="mb-4">{{ .title | markdownify }}</h2>
-            <p class="mb-8 text-lg">{{ .content | markdownify }}</p>
-            <ul>
-              {{ range .bulletpoints }}
-                <li class="relative mb-4 pl-6">
-                  <i class="fa fa-check absolute left-0 top-1.5"></i>
-                  {{ . | markdownify }}
-                </li>
-              {{ end }}
-            </ul>
-            {{ with .button }}
-              {{ if .enable }}
-                <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">
-                  {{ .label }}
-                  <i class="fa fa-arrow-right pl-2"></i>
-                </a>
-              {{ end }}
+          <div class="col-12 md:col-6">
+            {{ if .Params.image }}
+              {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Loading" "eager" "Class" "mx-auto rounded-lg w-full") }}
             {{ end }}
           </div>
         </div>
       </div>
     </section>
-  {{ end }}
+  {{- end -}}
 
-  <!-- Testimonials -->
-  {{ with site.GetPage "sections/testimonial" }}
-    {{ if .Params.enable }}
-      <section class="section">
-        <div class="container">
-          {{/* Testimonial content */}}
-        </div>
-      </section>
-    {{ end }}
-  {{ end }}
+  <!-- Latest Posts -->
+  <section class="section pt-0 bg-gradient">
+    {{ partial "latest-posts" . }}
+  </section>
 {{ end }}

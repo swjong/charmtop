@@ -20,7 +20,13 @@
                 <h4 class="mb-3">
                   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </h4>
-                <p class="mb-4">{{ .Summary }}</p>
+                <p class="mb-4">
+                  {{ if eq .Lang "zh" }}
+                    {{ .Plain | truncate 125 }}
+                  {{ else }}
+                    {{ .Plain | truncate 100 }}
+                  {{ end }}
+                </p>
                 <a class="btn btn-primary btn-sm" href="{{ .RelPermalink }}">
                   閱讀更多
                   <i class="fa fa-arrow-right pl-2"></i>

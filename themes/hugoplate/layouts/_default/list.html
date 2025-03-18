@@ -1,16 +1,21 @@
 {{ define "main" }}
-  <main class="container">
-    <article>
-      <h1>{{ .Title }}</h1>
-      <div class="content">
-        {{ .Content }}
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto lg:col-10">
+          <div class="content">
+            {{ .Content }}
+          </div>
+          <div class="row">
+            {{ range .Paginator.Pages }}
+              <div class="md:col-6 lg:col-4 mb-14">
+                {{ partial "components/blog-card" . }}
+              </div>
+            {{ end }}
+          </div>
+          {{ partial "components/pagination.html" . }}
+        </div>
       </div>
-      <div class="posts">
-        {{ range .Paginator.Pages }}
-          {{ .Render "summary" }}
-        {{ end }}
-      </div>
-      {{ template "_internal/pagination.html" . }}
-    </article>
-  </main>
+    </div>
+  </section>
 {{ end }}
