@@ -1,5 +1,5 @@
 ---
-title: "Benefits, Cost Analysis, and Future Trends of Edge AI Visual Computing in Smart Cameras"
+title: "Future Trends of Edge AI Visual Computing in Smart Cameras"
 meta_title: "Edge AI Visual Computing: Benefits & Future Trends | Charmtop"
 description: "Explore the benefits, cost analysis, and future trends of integrating AI with smart cameras for visual computing."
 date: 2025-01-24T15:09:17+08:00

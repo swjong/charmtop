@@ -23,7 +23,7 @@ pageRef = "/casestudies"
 
 [[main]]
 weight = 5
-name = "Blog"
+name = "Industrial Trends"
 pageRef = "/blog"
 
 # [[main]]
