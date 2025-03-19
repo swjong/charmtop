@@ -1,4 +1,11 @@
 {{ define "main" }}
+  <!-- Font Size Control -->
+  <div class="text-right px-4">
+    <button onclick="decreaseFont()" class="btn btn-sm">A-</button>
+    <button onclick="resetFont()" class="btn btn-sm mx-2" id="resetButton">{{ if eq .Lang "zh" }}字體大小{{ else }}Font Size{{ end }}</button>
+    <button onclick="increaseFont()" class="btn btn-sm">A+</button>
+  </div>
+
   <!-- Featured Post -->
   {{- range first 1 (shuffle (where .Site.RegularPages "Type" "blog")) -}}
     <section class="section pt-14">
