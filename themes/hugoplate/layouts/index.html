@@ -10,8 +10,8 @@
   {{- range first 1 (shuffle (where .Site.RegularPages "Type" "blog")) -}}
     <section class="section pt-14">
       <div class="container">
-        <div class="row items-center justify-between flex-col-reverse md:flex-row">
-          <div class="lg:col-6 md:col-8 mb-8">
+        <div class="row flex flex-col md:flex-row items-center justify-between">
+          <div class="lg:col-6 md:col-8 mb-8 order-2 md:order-1">
             <h1 class="mb-4 text-h3 lg:text-h1">
               <a href="{{ .Permalink }}">{{ .Title }}</a>
             </h1>
@@ -30,7 +30,7 @@
               <i class="fa fa-arrow-right pl-2"></i>
             </a>
           </div>
-          <div class="col-12 md:col-6 mb-8 md:mb-0">
+          <div class="col-12 md:col-6 mb-8 md:mb-0 order-1 md:order-2">
             {{ if .Params.image }}
               {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Loading" "eager" "Class" "mx-auto rounded-lg w-full") }}
             {{ end }}
