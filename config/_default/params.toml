@@ -32,6 +32,20 @@ custom_script = ""
 # copyright
 copyright = "Powered by [Charmtop Consultants](https://www.charmtop.com.hk)"
 
+# Author information
+[params.author]
+  name = "Charmtop Consultants"
+  image = "images/author.jpg"
+  bio = "Professional consultancy services"
+  email = "info@charmtop.com.hk"
+
+# Social links
+[params.social]
+  twitter = "https://twitter.com/charmtop"
+  linkedin = "https://linkedin.com/company/charmtop"
+  facebook = "https://facebook.com/charmtop"
+  instagram = "https://instagram.com/charmtop"
+
 # Preloader
 # preloader module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
 [preloader]

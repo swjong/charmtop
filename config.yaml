@@ -1,3 +1,16 @@
+params:
+  author:
+    name: ""
+    email: ""
+    bio: ""
+    
+  social:
+    twitter: ""
+    facebook: ""
+    instagram: ""
+    linkedin: ""
+    github: ""
+    
 languages:
   zh:
     menu:

@@ -1,19 +1,15 @@
 version: 1
-backend:
-  phases:
-    build:
-      commands:
-        - echo "No backend build required"
+fversion: 1
 frontend:
   phases:
     preBuild:
       commands:
         - sudo yum install -y --allowerasing curl
-        - curl -LO "https://github.com/gohugoio/hugo/releases/download/v0.145.0/hugo_extended_0.145.0_Linux-64bit.tar.gz"
-        - sudo tar -xvf hugo_extended_0.145.0_Linux-64bit.tar.gz
+        - curl -LO "https://github.com/gohugoio/hugo/releases/download/v0.131.0/hugo_extended_0.131.0_Linux-64bit.tar.gz"
+        - sudo tar -xvf hugo_extended_0.131.0_Linux-64bit.tar.gz
         - sudo mv hugo /usr/local/bin/
-        - rm hugo_extended_0.145.0_Linux-64bit.tar.gz
-        - echo "HUGO 0.145.0 INSTALLED"
+        - rm hugo_extended_0.131.0_Linux-64bit.tar.gz
+        - echo "HUGO 0.131.0 INSTALLED"
         - curl -LO "https://dl.google.com/go/go1.22.6.linux-amd64.tar.gz"
         - sudo tar -C /usr/local -xzf go1.22.6.linux-amd64.tar.gz
         - export PATH=$PATH:/usr/local/go/bin
@@ -25,11 +21,10 @@ frontend:
         - npm run project-setup
         - npm run build
   artifacts:
-    baseDirectory: public
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: /public
     files:
       - "**/*"
   cache:
     paths:
-      - public/**/*
-      - resources/**/*
       - node_modules/**/*
