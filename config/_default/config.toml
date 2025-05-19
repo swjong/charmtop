@@ -1,0 +1,20 @@
+######################## default configuration ####################
+baseURL = "/"
+title = "Charmtop Consultancy"
+theme = "hugoplate"
+defaultContentLanguage = "zh"
+
+# Languages
+[languages]
+  [languages.zh]
+    languageName = "中文"
+    weight = 1
+  [languages.en]
+    languageName = "English"
+    weight = 2
+
+[params]
+  # Blog section
+  [params.blog_section]
+    enable = true
+    title = "Latest News"

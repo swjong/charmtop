@@ -1,0 +1,49 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+pageRef = "/"
+weight = 1
+
+[[main]]
+name = "About"
+pageRef = "/about"
+weight = 2
+
+[[main]]
+weight = 3
+name = "Our Services"
+pageRef = "/services"
+
+[[main]]
+weight = 4
+name = "Case Studies"
+pageRef = "/casestudies"
+
+[[main]]
+weight = 5
+name = "Industrial Trends"
+pageRef = "/blog"
+
+# [[main]]
+# parent = ""
+# name = "404 Page"
+# pageRef = "/404"
+
+
+# footer menu
+[[footer]]
+name = "About"
+pageRef = "/about"
+weight = 1
+
+[[footer]]
+name = "Our Services"
+pageRef = "/elements"
+weight = 2
+
+[[footer]]
+name = "Privacy Policy"
+pageRef = "/privacy-policy"
+weight = 3

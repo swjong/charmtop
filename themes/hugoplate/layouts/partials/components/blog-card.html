@@ -1,0 +1,21 @@
+<div class="bg-body dark:bg-darkmode-body">
+  {{ $image := .Params.image }}
+  {{ if $image }}
+    <img
+      class="mb-6 w-full rounded"
+      src="{{ $image | relURL }}"
+      alt="{{ .Title }}"
+      width="445"
+      height="230"
+    />
+  {{ end }}
+  <h4 class="mb-3">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </h4>
+  <p class="mb-6">
+    {{ .Plain | truncate 100 }}
+  </p>
+  <a class="btn btn-primary btn-sm" href="{{ .RelPermalink }}">
+    {{ i18n "read_more" }}
+  </a>
+</div>

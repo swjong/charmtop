@@ -1,0 +1,47 @@
+{{ define "main" }}
+  <!-- Font Size Control -->
+  <div class="text-right px-4">
+    <button onclick="decreaseFont()" class="btn btn-sm">A-</button>
+    <button onclick="resetFont()" class="btn btn-sm mx-2" id="resetButton">{{ if eq .Lang "zh" }}字體大小{{ else }}Font Size{{ end }}</button>
+    <button onclick="increaseFont()" class="btn btn-sm">A+</button>
+  </div>
+
+  <!-- Featured Post -->
+  {{- range first 1 (shuffle (where .Site.RegularPages "Type" "blog")) -}}
+    <section class="section pt-14">
+      <div class="container">
+        <div class="row flex flex-col md:flex-row items-center justify-between">
+          <div class="lg:col-6 md:col-8 mb-8 order-2 md:order-1">
+            <h1 class="mb-4 text-h3 lg:text-h1">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h1>
+            <p class="mb-3">
+              {{ if eq .Lang "zh" }}
+                {{ $content := replaceRE "##.*\\n" "" .Plain }}
+                {{ $content := replaceRE "^##.*\\n" "" $content }}
+                {{ $content := replaceRE "\\n##.*" "" $content }}
+                {{ $content | truncate 200 }}
+              {{ else }}
+                {{ replaceRE "##\\s+.*\\n" "" .Plain | truncate 200 }}
+              {{ end }}
+            </p>
+            <a class="btn btn-primary" href="{{ .Permalink }}">
+              {{ i18n "read_more" }}
+              <i class="fa fa-arrow-right pl-2"></i>
+            </a>
+          </div>
+          <div class="col-12 md:col-6 mb-8 md:mb-0 order-1 md:order-2">
+            {{ if .Params.image }}
+              {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Loading" "eager" "Class" "mx-auto rounded-lg w-full") }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{- end -}}
+
+  <!-- Latest Posts -->
+  <section class="section pt-0 bg-gradient">
+    {{ partial "latest-posts" . }}
+  </section>
+{{ end }}

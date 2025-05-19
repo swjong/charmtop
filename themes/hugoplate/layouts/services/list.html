@@ -1,0 +1,30 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+  <section class="section-sm">
+    <div class="container">
+      <div class="row gy-5 justify-center">
+        {{ range .RegularPages }}
+          <div class="lg:col-4 md:col-6">
+            <div class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg p-8 text-center">
+              <h4 class="mb-3">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h4>
+              <img
+                class="mx-auto mb-6 rounded-lg h-32 w-auto"
+                src="/images/services/services.png"
+                alt="{{ .Title }}"
+                width="200"
+                height="100"
+              />
+              <a class="btn btn-primary btn-sm" href="{{ .RelPermalink }}">
+                {{ i18n "read_more" | default "Learn More" }}
+                <i class="fa fa-arrow-right pl-2"></i>
+              </a>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

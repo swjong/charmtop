@@ -1,0 +1,32 @@
+{{ $url := .Get "url" }}
+{{ $limit := default 5 (.Get "limit") }}
+
+<div class="rss-feed">
+  {{ $feed := resources.GetRemote $url }}
+  {{ if $feed }}
+    {{ with $feed.Content }}
+      {{ $xml := . | transform.Unmarshal }}
+      <div class="grid grid-cols-1 gap-6 mt-4">
+        {{ if index $xml "rss" }}
+          {{ range first $limit (index (index $xml "rss") "channel" "item") }}
+            <article class="bg-theme-light dark:bg-darkmode-theme-light p-6 rounded-lg">
+              <h3 class="h5 mb-2">
+                <a href="{{ index . "link" }}" class="text-primary hover:text-primary-700" target="_blank" rel="noopener">
+                  {{ index . "title" }}
+                </a>
+              </h3>
+              <time class="text-sm text-gray-500">{{ dateFormat "January 2, 2006" (index . "pubDate") }}</time>
+              <p class="mt-3">{{ index . "description" | plainify | truncate 150 }}</p>
+            </article>
+          {{ end }}
+        {{ else }}
+          <div class="text-center p-4">Invalid RSS feed structure</div>
+        {{ end }}
+      </div>
+    {{ else }}
+      <div class="text-center p-4">Unable to parse feed content</div>
+    {{ end }}
+  {{ else }}
+    <div class="text-center p-4">Unable to load feed</div>
+  {{ end }}
+</div>

@@ -1,0 +1,45 @@
+{{ $url := .Get "url" }}
+{{ $limit := default 5 (.Get "limit") }}
+
+<div class="rss-feed">
+  {{ $headers := dict "Accept" "application/rss+xml, application/xml, text/xml" "User-Agent" "Hugo Static Site Generator" }}
+  {{ $feed := resources.GetRemote $url (dict "headers" $headers) }}
+  {{ if not $feed }}
+    <div class="text-center p-4 text-red-500">Failed to fetch RSS feed. Please check the URL and ensure it's accessible.</div>
+  {{ else }}
+    {{ with $feed.Content }}
+      {{ $xml := . | transform.Unmarshal }}
+      {{ $items := slice }}
+      {{ if index $xml "rss" }}
+        {{ $channel := index $xml "rss" "channel" }}
+        {{ with $channel }}
+          {{ $items = index . "item" }}
+        {{ end }}
+      {{ else if index $xml "feed" }}
+        {{ $items = index $xml "feed" "entry" }}
+      {{ end }}
+
+      {{ if $items }}
+        <div class="grid grid-cols-1 gap-6 mt-4">
+          {{ range first $limit $items }}
+            <article class="bg-theme-light dark:bg-darkmode-theme-light p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+              <h3 class="h5 mb-2">
+                <a href="{{ index . "link" | default (index . "link" "href") }}" class="text-primary hover:text-primary-700" target="_blank" rel="noopener">
+                  {{ index . "title" }}
+                </a>
+              </h3>
+              {{ $pubDate := index . "pubDate" | default (index . "published") }}
+              <time class="text-sm text-gray-500">{{ dateFormat "January 2, 2006" $pubDate }}</time>
+              {{ $description := index . "description" | default (index . "summary") }}
+              <p class="mt-3">{{ $description | plainify | truncate 150 }}</p>
+            </article>
+          {{ end }}
+        </div>
+      {{ else }}
+        <div class="text-center p-4 text-red-500">No items found in the feed</div>
+      {{ end }}
+    {{ else }}
+      <div class="text-center p-4 text-red-500">Unable to parse feed content</div>
+    {{ end }}
+  {{ end }}
+</div>
