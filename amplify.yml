@@ -3,33 +3,33 @@ frontend:
   phases:
     preBuild:
       commands:
-        - sudo yum install -y --allowerasing curl python3-pip
-        - sudo rm -f /usr/bin/hugo /usr/local/bin/hugo /bin/hugo /root/.nvm/versions/node/v18.20.8/bin/hugo
-        - curl -LO "https://github.com/gohugoio/hugo/releases/download/v0.124.0/hugo_extended_0.124.0_Linux-64bit.tar.gz"
-        - sudo tar -xvf hugo_extended_0.124.0_Linux-64bit.tar.gz
-        - sudo mv hugo /usr/local/bin/hugo
-        - rm hugo_extended_0.124.0_Linux-64bit.tar.gz
-        - echo "HUGO 0.124.0 INSTALLED"
-        - export PATH=/usr/local/bin:$PATH
-        - which hugo
-        - hugo version
-        - echo $PATH
-        - curl -LO "https://dl.google.com/go/go1.22.2.linux-amd64.tar.gz"
-        - sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz
-        - export PATH=$PATH:/usr/local/go/bin
-        - rm go1.22.2.linux-amd64.tar.gz
-        - echo "GO 1.22.2 INSTALLED"
-        - npm install
-        - echo "Checking AWS CLI..."
-        - command -v aws || pip3 install --upgrade awscli
-        - aws --version
-        - mkdir -p content/chinese/blog/post static/images/blog
-        - aws s3 sync s3://itsquarewebsite1/content/ content/chinese/blog/ --no-progress || echo "ERROR: Failed to sync s3://itsquarewebsite1/content/ to content/chinese/blog/"
-        - aws s3 sync s3://itsquarewebsite1/static/images/blog/ static/images/blog/ --no-progress || echo "ERROR: Failed to sync s3://itsquarewebsite1/static/images/blog/ to static/images/blog/"
+        - "sudo yum install -y --allowerasing curl python3-pip"
+        - "sudo rm -f /usr/bin/hugo /usr/local/bin/hugo /bin/hugo /root/.nvm/versions/node/v18.20.8/bin/hugo"
+        - "curl -LO 'https://github.com/gohugoio/hugo/releases/download/v0.124.0/hugo_extended_0.124.0_Linux-64bit.tar.gz'"
+        - "sudo tar -xvf hugo_extended_0.124.0_Linux-64bit.tar.gz"
+        - "sudo mv hugo /usr/local/bin/hugo"
+        - "rm hugo_extended_0.124.0_Linux-64bit.tar.gz"
+        - "echo 'HUGO 0.124.0 INSTALLED'"
+        - "export PATH=/usr/local/bin:$PATH"
+        - "which hugo"
+        - "hugo version"
+        - "echo $PATH"
+        - "curl -LO 'https://dl.google.com/go/go1.22.2.linux-amd64.tar.gz'"
+        - "sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz"
+        - "export PATH=$PATH:/usr/local/go/bin"
+        - "rm go1.22.2.linux-amd64.tar.gz"
+        - "echo 'GO 1.22.2 INSTALLED'"
+        - "npm install"
+        - "echo 'Checking AWS CLI...'"
+        - "command -v aws || pip3 install --upgrade awscli"
+        - "aws --version"
+        - "mkdir -p content/chinese/blog/post static/images/blog"
+        - "aws s3 sync 's3://itsquarewebsite1/content/' content/chinese/blog/ --no-progress || echo 'ERROR: Failed to sync s3://itsquarewebsite1/content/ to content/chinese/blog/'"
+        - "aws s3 sync 's3://itsquarewebsite1/static/images/blog/' static/images/blog/ --no-progress || echo 'ERROR: Failed to sync s3://itsquarewebsite1/static/images/blog/ to static/images/blog/'"
     build:
       commands:
-        - npm run project-setup
-        - npm run build
+        - "npm run project-setup"
+        - "npm run build"
   artifacts:
     baseDirectory: public
     files:
