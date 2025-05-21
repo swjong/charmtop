@@ -1,6 +1,6 @@
 ######################## default configuration ####################
 # The base URL of your site (required). This will be prepended to all relative URLs.
-baseURL = "https://staging.d18amvkre2hl3y.amplifyapp.com/"
+baseURL = "https://main.d19i40yl0o9ypc.amplifyapp.com/"
 # Title of your website (required).
 title = "Charmtop"
 # Your theme name
