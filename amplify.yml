@@ -1,30 +1,33 @@
 version: 1
-fversion: 1
 frontend:
   phases:
     preBuild:
       commands:
         - sudo yum install -y --allowerasing curl
-        - curl -LO "https://github.com/gohugoio/hugo/releases/download/v0.131.0/hugo_extended_0.131.0_Linux-64bit.tar.gz"
-        - sudo tar -xvf hugo_extended_0.131.0_Linux-64bit.tar.gz
-        - sudo mv hugo /usr/local/bin/
-        - rm hugo_extended_0.131.0_Linux-64bit.tar.gz
-        - echo "HUGO 0.131.0 INSTALLED"
-        - curl -LO "https://dl.google.com/go/go1.22.6.linux-amd64.tar.gz"
-        - sudo tar -C /usr/local -xzf go1.22.6.linux-amd64.tar.gz
+        - sudo rm -f /usr/bin/hugo /usr/local/bin/hugo /bin/hugo /root/.nvm/versions/node/v18.20.8/bin/hugo  # Remove all Hugo binaries
+        - curl -LO "https://github.com/gohugoio/hugo/releases/download/v0.124.0/hugo_extended_0.124.0_Linux-64bit.tar.gz"
+        - sudo tar -xvf hugo_extended_0.124.0_Linux-64bit.tar.gz
+        - sudo mv hugo /usr/local/bin/hugo
+        - rm hugo_extended_0.124.0_Linux-64bit.tar.gz
+        - echo "HUGO 0.124.0 INSTALLED"
+        - export PATH=/usr/local/bin:$PATH  # Prioritize /usr/local/bin
+        - which hugo  # Should show /usr/local/bin/hugo
+        - hugo version  # Should show v0.124.0
+        - echo $PATH  # Debug PATH
+        - curl -LO "https://dl.google.com/go/go1.22.2.linux-amd64.tar.gz"
+        - sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz
         - export PATH=$PATH:/usr/local/go/bin
-        - rm go1.22.6.linux-amd64.tar.gz
-        - echo "GO 1.22.6 INSTALLED"
+        - rm go1.22.2.linux-amd64.tar.gz
+        - echo "GO 1.22.2 INSTALLED"
         - npm install
     build:
       commands:
         - npm run project-setup
         - npm run build
   artifacts:
-    # IMPORTANT - Please verify your build output directory
-    baseDirectory: /public
+    baseDirectory: public
     files:
-      - "**/*"
+      - '**/*'
   cache:
     paths:
       - node_modules/**/*
