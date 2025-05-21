@@ -1,15 +1,15 @@
 version: 1
-fversion: 1
 frontend:
   phases:
     preBuild:
       commands:
         - sudo yum install -y --allowerasing curl
-        - curl -LO "https://github.com/gohugoio/hugo/releases/download/v0.124.1/hugo_extended_0.124.1_Linux-64bit.tar.gz"
-        - sudo tar -xvf hugo_extended_0.124.1_Linux-64bit.tar.gz
-        - sudo mv hugo /usr/local/bin/
-        - rm hugo_extended_0.124.1_Linux-64bit.tar.gz
-        - echo "HUGO 0.124.1 INSTALLED"
+        - curl -LO "https://github.com/gohugoio/hugo/releases/download/v0.124.0/hugo_extended_0.124.0_Linux-64bit.tar.gz"
+        - sudo tar -xvf hugo_extended_0.124.0_Linux-64bit.tar.gz
+        - sudo mv hugo /usr/local/bin/hugo
+        - rm hugo_extended_0.124.0_Linux-64bit.tar.gz
+        - echo "HUGO 0.124.0 INSTALLED"
+        - hugo version  # Verify the installed version
         - curl -LO "https://dl.google.com/go/go1.22.2.linux-amd64.tar.gz"
         - sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz
         - export PATH=$PATH:/usr/local/go/bin
@@ -21,10 +21,9 @@ frontend:
         - npm run project-setup
         - npm run build
   artifacts:
-    # IMPORTANT - Please verify your build output directory
-    baseDirectory: /public
+    baseDirectory: public
     files:
-      - "**/*"
+      - '**/*'
   cache:
     paths:
       - node_modules/**/*
