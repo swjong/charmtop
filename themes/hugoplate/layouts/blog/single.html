@@ -1,8 +1,8 @@
 {{ define "main" }}
   <section class="section pt-7">
-    <div class="container">
-      <div class="row justify-center">
-        <article class="lg:col-10">
+    <div class="container h-full flex flex-col min-h-screen">
+      <div class="row justify-center flex-1">
+        <article class="lg:col-10 flex flex-col h-full">
           {{ $image:= .Params.image }}
           {{ if $image }}
             <div class="mb-10">
@@ -38,7 +38,7 @@
             {{ partial "toc.html" (dict "Class" "blog" "Collapsed" false "TableOfContents" .TableOfContents ) }}
             {{ .Content }}
           </div>
-          <div class="row items-start justify-between">
+          <div class="row items-start justify-between mt-auto">
             {{ $tags:= .Params.tags }}
             {{ if $tags }}
               <div class="lg:col-5 mb-10 flex items-center lg:mb-0">
