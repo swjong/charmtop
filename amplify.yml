@@ -3,17 +3,17 @@ frontend:
   phases:
     preBuild:
       commands:
-        - sudo yum install -y --allowerasing curl
-        - curl -LO "https://github.com/gohugoio/hugo/releases/download/v0.131.0/hugo_extended_0.131.0_Linux-64bit.tar.gz"
-        - sudo tar -xvf hugo_extended_0.131.0_Linux-64bit.tar.gz
-        - sudo mv hugo /usr/local/bin/
+        - curl -L https://github.com/gohugoio/hugo/releases/download/v0.131.0/hugo_extended_0.131.0_macOS-universal.tar.gz -o hugo.tar.gz
+        - tar -xzf hugo.tar.gz
+        - mv hugo /usr/local/bin/hugo
+        - rm hugo.tar.gz
+        - curl -LO https://go.dev/dl/go1.22.6.darwin-arm64.tar.gz
+        - sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.6.darwin-arm64.tar.gz
+        - rm go1.22.6.darwin-arm64.tar.gz
         - export PATH=/usr/local/bin:$PATH
-        - rm hugo_extended_0.131.0_Linux-64bit.tar.gz
-        - echo "HUGO 0.131.0 INSTALLED"
-        - curl -LO "https://dl.google.com/go/go1.22.6.linux-amd64.tar.gz"
-        - sudo tar -C /usr/local -xzf go1.22.6.linux-amd64.tar.gz
-        - export PATH=/usr/local/bin:/usr/local/go/bin:$PATH
-        - npm install
+        - aws s3 sync s3://itsquarefullcontent/content ./content --delete
+        - export PATH=/usr/local/bin:/usr/local/go/bin:$PATH && npm install
+        - export PATH=/usr/local/bin:/usr/local/go/bin:$PATH && npm run project-setup
     build:
       commands:
         - export PATH=/usr/local/bin:/usr/local/go/bin:$PATH && npm run project-setup
