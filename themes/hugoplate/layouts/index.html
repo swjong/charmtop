@@ -1,6 +1,6 @@
 {{ define "main" }}
   <!-- Featured Post -->
-  {{- range first 1 (shuffle (where .Site.RegularPages "Type" "blog")) -}}
+  {{- range first 1 (sort (where .Site.RegularPages "Type" "blog") "Date" "desc") -}}
     <section class="section pt-14">
       <div class="container">
         <div class="row items-center justify-between">

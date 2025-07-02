@@ -1,6 +1,6 @@
 ---
 title: "AI-Enhanced Security Surveillance"
-date: 2024-01-20
+date: 2024-01-20T00:00:00Z
 draft: false
 description: "Leveraging AI for advanced security monitoring and property protection"
 image: "images/service/surveillance.jpg"

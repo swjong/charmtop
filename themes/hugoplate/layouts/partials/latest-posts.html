@@ -4,7 +4,7 @@
       <div class="container">
         <h2 class="h3 mb-6 text-center">{{ .title }}</h2>
         <div class="row gy-4 justify-center items-stretch">
-          {{ $posts := where site.RegularPages "Section" "blog" }}
+          {{ $posts := sort (where site.RegularPages "Section" "blog") "Date" "desc" }}
           {{ range first (.show_posts | default 3) $posts }}
             <div class="lg:col-4 md:col-6 flex">
               <div class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg p-8 text-center flex flex-col flex-1">
