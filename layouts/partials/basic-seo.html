@@ -1,2 +1,8 @@
-<meta property="og:image" content="https://charmtop.com/images/logo.png">
-<meta name="twitter:image" content="https://charmtop.com/images/logo.png">
+{{ $image := .Params.image | default site.Params.seo.image }}
+{{ if $image }}
+  {{ if not (urls.Parse $image).IsAbs }}
+    {{ $image = absURL $image }}
+  {{ end }}
+  <meta property="og:image" content="{{ $image }}">
+  <meta name="twitter:image" content="{{ $image }}">
+{{ end }}
