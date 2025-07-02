@@ -1,23 +1,13 @@
-######################## default configuration ####################
-# The base URL of your site (required). This will be prepended to all relative URLs.
-baseURL = "http://localhost:1313"
-# Title of your website (required).
+baseURL = "https://main.d19i40yl0o9ypc.amplifyapp.com/"
 title = "Charmtop"
-# Your theme name
 theme = "hugoplate"
-# Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 timeZone = "Asia/Hong_Kong"
-# post pagination
 paginate = 2 # see https://gohugo.io/extras/pagination/
-# post excerpt
 summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
-# disable language
 disableLanguages = [
 ] # example: ["fr"] for disable french language. see https://gohugo.io/content-management/multilingual/
 hasCJKLanguage = true #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
-# default language
 defaultContentLanguage = 'zh'
-# defaultContentLanguageInSubdir need to be true if you want to use the language code as a subdirectory and language specific 404 page
 defaultContentLanguageInSubdir = false
 
 ########################### Services #############################
