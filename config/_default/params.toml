@@ -22,7 +22,7 @@ mainSections = ["blog"]
 summary_length = 120
 chinese_summary_length = 600  # Updated Chinese summary length
 # contact form action
-contact_form_action = "https://formspree.io/f/your_form_id_here" # Replace 'your_form_id_here' with your actual Formspree form ID
+contact_form_action = "https://formspree.io/f/mwpbzbro"
 # contact form works with [https://airform.io/] or [https://formspree.io]
 # google tag manager, see https://developers.google.com/tag-manager/
 google_tag_manager = "GTM-526D9M9S" # Google Tag Manager ID
