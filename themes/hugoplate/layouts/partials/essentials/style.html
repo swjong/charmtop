@@ -54,19 +54,31 @@
 {{ $styles = $styles | resources.Concat "css/style.css" }}
 {{ $styles = $styles | resources.PostCSS }}
 
-{{ if gt (len $stylesLazy) 0 }}
-  {{ $stylesLazy = $stylesLazy | resources.Concat "css/style-lazy.css" }}
-  {{ $stylesLazy = $stylesLazy | resources.PostCSS }}
+{{ if reflect.IsSlice $stylesLazy }}
+  {{ if gt (len $stylesLazy) 0 }}
+    {{ $stylesLazy = $stylesLazy | resources.Concat "css/style-lazy.css" }}
+    {{ $stylesLazy = $stylesLazy | resources.PostCSS }}
+  {{ end }}
+{{ else }}
+  {{/* $stylesLazy is already a resource, do nothing */}}
 {{ end }}
 
 {{ if hugo.IsProduction }}
   {{ $styles = $styles | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint | resources.PostProcess }}
-  {{ if gt (len $stylesLazy) 0 }}
+  {{ if reflect.IsSlice $stylesLazy }}
+    {{ if gt (len $stylesLazy) 0 }}
+      {{ $stylesLazy = $stylesLazy | resources.ExecuteAsTemplate "css/style-lazy.css" . | minify | fingerprint | resources.PostProcess }}
+    {{ end }}
+  {{ else if $stylesLazy }}
     {{ $stylesLazy = $stylesLazy | resources.ExecuteAsTemplate "css/style-lazy.css" . | minify | fingerprint | resources.PostProcess }}
   {{ end }}
 {{ else }}
   {{ $styles = $styles | resources.ExecuteAsTemplate "css/style.css" . }}
-  {{ if $stylesLazy }}
+  {{ if reflect.IsSlice $stylesLazy }}
+    {{ if gt (len $stylesLazy) 0 }}
+      {{ $stylesLazy = $stylesLazy | resources.ExecuteAsTemplate "css/style-lazy.css" . }}
+    {{ end }}
+  {{ else if $stylesLazy }}
     {{ $stylesLazy = $stylesLazy | resources.ExecuteAsTemplate "css/style-lazy.css" . }}
   {{ end }}
 {{ end }}
@@ -84,7 +96,7 @@
   async
   rel="stylesheet"
   href="{{ $stylesLazy.RelPermalink }}"
-  integrity="{{ $stylesLazy.Data.Integrity }}"
+  {{ if $stylesLazy.Data.Integrity }}integrity="{{ $stylesLazy.Data.Integrity }}"{{ end }}
   media="print"
   onload="this.media='all'; this.onload=null;" />
 {{ end }}
