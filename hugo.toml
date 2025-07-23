@@ -2,7 +2,7 @@ baseURL = "https://main.d19i40yl0o9ypc.amplifyapp.com/"
 title = "Charmtop"
 theme = "hugoplate"
 timeZone = "Asia/Hong_Kong"
-paginate = 2 # see https://gohugo.io/extras/pagination/
+paginate = 4 # see https://gohugo.io/extras/pagination/
 summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
 disableLanguages = [
 ] # example: ["fr"] for disable french language. see https://gohugo.io/content-management/multilingual/

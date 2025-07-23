@@ -54,15 +54,21 @@
 {{ $styles = $styles | resources.Concat "css/style.css" }}
 {{ $styles = $styles | resources.PostCSS }}
 
-{{ $stylesLazy = $stylesLazy | resources.Concat "css/style-lazy.css" }}
-{{ $stylesLazy = $stylesLazy | resources.PostCSS }}
+{{ if gt (len $stylesLazy) 0 }}
+  {{ $stylesLazy = $stylesLazy | resources.Concat "css/style-lazy.css" }}
+  {{ $stylesLazy = $stylesLazy | resources.PostCSS }}
+{{ end }}
 
 {{ if hugo.IsProduction }}
   {{ $styles = $styles | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint | resources.PostProcess }}
-  {{ $stylesLazy = $stylesLazy | resources.ExecuteAsTemplate "css/style-lazy.css" . | minify | fingerprint | resources.PostProcess }}
+  {{ if gt (len $stylesLazy) 0 }}
+    {{ $stylesLazy = $stylesLazy | resources.ExecuteAsTemplate "css/style-lazy.css" . | minify | fingerprint | resources.PostProcess }}
+  {{ end }}
 {{ else }}
   {{ $styles = $styles | resources.ExecuteAsTemplate "css/style.css" . }}
-  {{ $stylesLazy = $stylesLazy | resources.ExecuteAsTemplate "css/style-lazy.css" . }}
+  {{ if $stylesLazy }}
+    {{ $stylesLazy = $stylesLazy | resources.ExecuteAsTemplate "css/style-lazy.css" . }}
+  {{ end }}
 {{ end }}
 
 {{/* styles */}}
@@ -72,6 +78,7 @@
   rel="stylesheet" />
 
 {{/* styles lazy */}}
+{{ if $stylesLazy }}
 <link
   defer
   async
@@ -80,3 +87,4 @@
   integrity="{{ $stylesLazy.Data.Integrity }}"
   media="print"
   onload="this.media='all'; this.onload=null;" />
+{{ end }}

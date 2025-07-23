@@ -21,11 +21,15 @@
 {{ $scripts = $scripts | append (resources.Get "js/main.js") }}
 {{ $scripts = $scripts | resources.Concat "js/script.js" }}
 
-{{ $scriptsLazy = $scriptsLazy | resources.Concat "js/script-lazy.js" }}
+{{ if $scriptsLazy }}
+  {{ $scriptsLazy = $scriptsLazy | resources.Concat "js/script-lazy.js" }}
+  {{ if hugo.IsProduction }}
+    {{ $scriptsLazy = $scriptsLazy | minify | fingerprint }}
+  {{ end }}
+{{ end }}
 
 {{ if hugo.IsProduction }}
   {{ $scripts = $scripts | minify | fingerprint }}
-  {{ $scriptsLazy = $scriptsLazy | minify | fingerprint }}
 {{ end }}
 
 {{/* scripts */}}
@@ -35,12 +39,14 @@
   src="{{ $scripts.RelPermalink }}"></script>
 
 {{/* scripts lazy */}}
+{{ if $scriptsLazy }}
 <script
   defer
   async
   crossorigin="anonymous"
   integrity="{{ $scriptsLazy.Data.Integrity }}"
   src="{{ $scriptsLazy.RelPermalink }}"></script>
+{{ end }}
 
 <!-- progressive web app -->
 {{ partialCached "pwa.html" . }}

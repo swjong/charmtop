@@ -5,14 +5,14 @@
       <h5 class="mb-6">{{ T "tags" }}</h5>
       <div class="bg-theme-light dark:bg-darkmode-theme-light rounded p-6">
         <ul>
-          {{ range $name, $items := site.Taxonomies.tags }}
+          {{ range $index, $tag := first 20 (sort site.Taxonomies.tags.ByCount "Count" "desc") }}
             <li class="inline-block">
               <a
-                class="hover:bg-primary dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-dark {{ if (and (eq $.Page.Kind `term`) (eq $.Page.Type `tags`) (eq $.Page.Title .Page.Title)) }}
+                class="hover:bg-primary dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-dark {{ if (and (eq $.Page.Kind `term`) (eq $.Page.Type `tags`) (eq $.Page.Title $tag.Page.Title)) }}
                   active
                 {{ end }} m-1 block rounded bg-white px-3 py-1 hover:text-white"
-                href="{{ .Page.RelPermalink }}">
-                {{ .Page.Title }}
+                href="{{ $tag.Page.RelPermalink }}">
+                {{ $tag.Page.Title }}
               </a>
             </li>
           {{ end }}

@@ -4,18 +4,62 @@
 
   <section class="section">
     <div class="container">
-      <ul class="text-center">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold mb-4">文章分類</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-400">探索不同主題的文章，點擊分類查看相關內容</p>
+      </div>
+      <ul class="flex flex-wrap justify-center items-center gap-4">
         {{/* categories */}}
         {{ if eq .Permalink (`categories/` | absLangURL) }}
           {{ range site.Taxonomies.categories.ByCount }}
+            {{ $sizeClass := "text-base" }}
+            {{ $bgColor := "bg-blue-100" }}
+            {{ $borderColor := "border-blue-300" }}
+            {{ $textColor := "text-blue-800" }}
+            {{ $hoverColor := "hover:bg-blue-200" }}
+            
+            {{ if ge .Count 20 }}
+              {{ $sizeClass = "text-2xl px-6 py-4" }}
+              {{ $bgColor = "bg-red-100" }}
+              {{ $borderColor = "border-red-300" }}
+              {{ $textColor = "text-red-800" }}
+              {{ $hoverColor = "hover:bg-red-200" }}
+            {{ else if ge .Count 10 }}
+              {{ $sizeClass = "text-xl px-5 py-3" }}
+              {{ $bgColor = "bg-orange-100" }}
+              {{ $borderColor = "border-orange-300" }}
+              {{ $textColor = "text-orange-800" }}
+              {{ $hoverColor = "hover:bg-orange-200" }}
+            {{ else if ge .Count 5 }}
+              {{ $sizeClass = "text-lg px-4 py-2" }}
+              {{ $bgColor = "bg-green-100" }}
+              {{ $borderColor = "border-green-300" }}
+              {{ $textColor = "text-green-800" }}
+              {{ $hoverColor = "hover:bg-green-200" }}
+            {{ else if ge .Count 3 }}
+              {{ $sizeClass = "text-base px-4 py-2" }}
+              {{ $bgColor = "bg-purple-100" }}
+              {{ $borderColor = "border-purple-300" }}
+              {{ $textColor = "text-purple-800" }}
+              {{ $hoverColor = "hover:bg-purple-200" }}
+            {{ else }}
+              {{ $sizeClass = "text-sm px-3 py-1" }}
+              {{ $bgColor = "bg-gray-100" }}
+              {{ $borderColor = "border-gray-300" }}
+              {{ $textColor = "text-gray-800" }}
+              {{ $hoverColor = "hover:bg-gray-200" }}
+            {{ end }}
+            
             <li class="m-3 inline-block">
               <a
                 href="{{ .Page.Permalink }}"
-                class="bg-theme-light text-dark dark:bg-darkmode-theme-light dark:text-darkmode-dark block rounded px-4 py-2 text-xl">
-                {{ .Page.Title }}
-                <span class="bg-body dark:bg-darkmode-body ml-2 rounded px-2">
-                  {{ .Count }}
-                </span>
+                class="{{ $bgColor }} {{ $textColor }} {{ $borderColor }} {{ $hoverColor }} dark:bg-opacity-20 dark:border-opacity-20 border-2 rounded-lg block font-medium transition-all duration-200 transform hover:scale-105 shadow-sm hover:shadow-md">
+                <div class="flex items-center justify-between">
+                  <span class="{{ $sizeClass }}">{{ .Page.Title }}</span>
+                  <span class="bg-white bg-opacity-50 dark:bg-darkmode-body dark:bg-opacity-30 ml-3 rounded-full px-3 py-1 text-sm font-bold">
+                    {{ .Count }}
+                  </span>
+                </div>
               </a>
             </li>
           {{ end }}
@@ -23,14 +67,54 @@
         {{/* tags */}}
         {{ if eq .Permalink (`tags/` | absLangURL) }}
           {{ range site.Taxonomies.tags.ByCount }}
+            {{ $sizeClass := "text-base" }}
+            {{ $bgColor := "bg-indigo-100" }}
+            {{ $borderColor := "border-indigo-300" }}
+            {{ $textColor := "text-indigo-800" }}
+            {{ $hoverColor := "hover:bg-indigo-200" }}
+            
+            {{ if ge .Count 15 }}
+              {{ $sizeClass = "text-2xl px-6 py-4" }}
+              {{ $bgColor = "bg-pink-100" }}
+              {{ $borderColor = "border-pink-300" }}
+              {{ $textColor = "text-pink-800" }}
+              {{ $hoverColor = "hover:bg-pink-200" }}
+            {{ else if ge .Count 8 }}
+              {{ $sizeClass = "text-xl px-5 py-3" }}
+              {{ $bgColor = "bg-yellow-100" }}
+              {{ $borderColor = "border-yellow-300" }}
+              {{ $textColor = "text-yellow-800" }}
+              {{ $hoverColor = "hover:bg-yellow-200" }}
+            {{ else if ge .Count 4 }}
+              {{ $sizeClass = "text-lg px-4 py-2" }}
+              {{ $bgColor = "bg-teal-100" }}
+              {{ $borderColor = "border-teal-300" }}
+              {{ $textColor = "text-teal-800" }}
+              {{ $hoverColor = "hover:bg-teal-200" }}
+            {{ else if ge .Count 2 }}
+              {{ $sizeClass = "text-base px-4 py-2" }}
+              {{ $bgColor = "bg-cyan-100" }}
+              {{ $borderColor = "border-cyan-300" }}
+              {{ $textColor = "text-cyan-800" }}
+              {{ $hoverColor = "hover:bg-cyan-200" }}
+            {{ else }}
+              {{ $sizeClass = "text-sm px-3 py-1" }}
+              {{ $bgColor = "bg-gray-100" }}
+              {{ $borderColor = "border-gray-300" }}
+              {{ $textColor = "text-gray-800" }}
+              {{ $hoverColor = "hover:bg-gray-200" }}
+            {{ end }}
+            
             <li class="m-3 inline-block">
               <a
                 href="{{ .Page.Permalink }}"
-                class="bg-theme-light text-dark dark:bg-darkmode-theme-light dark:text-darkmode-dark block rounded px-4 py-2 text-xl">
-                {{ .Page.Title }}
-                <span class="bg-body dark:bg-darkmode-body ml-2 rounded px-2">
-                  {{ .Count }}
-                </span>
+                class="{{ $bgColor }} {{ $textColor }} {{ $borderColor }} {{ $hoverColor }} dark:bg-opacity-20 dark:border-opacity-20 border-2 rounded-lg block font-medium transition-all duration-200 transform hover:scale-105 shadow-sm hover:shadow-md">
+                <div class="flex items-center justify-between">
+                  <span class="{{ $sizeClass }}">{{ .Page.Title }}</span>
+                  <span class="bg-white bg-opacity-50 dark:bg-darkmode-body dark:bg-opacity-30 ml-3 rounded-full px-3 py-1 text-sm font-bold">
+                    {{ .Count }}
+                  </span>
+                </div>
               </a>
             </li>
           {{ end }}

@@ -1,0 +1,59 @@
+<!-- Post Archive Navigation -->
+<section class="section-sm bg-gray-50 dark:bg-gray-800">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="lg:col-8 text-center">
+        <h3 class="h4 mb-6">探索更多文章</h3>
+        
+        <!-- Navigation Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+          <a href="/blog" class="btn btn-primary">
+            <i class="fas fa-archive mr-2"></i>
+            查看所有文章
+          </a>
+          <a href="/categories" class="btn btn-outline-primary">
+            <i class="fas fa-tags mr-2"></i>
+            文章分類
+          </a>
+        </div>
+
+        <!-- Recent Posts Preview -->
+        <div class="mt-8">
+          <h4 class="h5 mb-4">最近文章</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
+            {{ range first 6 (where site.RegularPages "Section" "blog") }}
+              <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h5 class="text-sm font-semibold mb-2">
+                  <a href="{{ .Permalink }}" class="hover:text-primary">
+                    {{ .Title }}
+                  </a>
+                </h5>
+                <p class="text-xs text-gray-600 dark:text-gray-400">
+                  {{ .Date.Format "2006-01-02" }}
+                </p>
+              </div>
+            {{ else }}
+              <div class="col-12 text-center py-8">
+                <p class="text-gray-500">暂无文章</p>
+                <a href="/blog" class="btn btn-primary mt-4">开始阅读</a>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+
+        <!-- Pagination Hint -->
+        <div class="mt-6">
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            使用博客页面的分页功能浏览更多历史文章
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+</style>
