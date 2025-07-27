@@ -31,3 +31,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros,
 2. comments that threaten or harm the reputation of any person or organization
 3. personal information including, but limited to, email addresses, telephone numbers
 4. Any Update come in The technology Customer will get automatic Notification.
+
+#### Contact Us
+
+If you have any questions about this Privacy Policy or your personal information, please contact us at [info@charmtop.com.hk](mailto:info@charmtop.com.hk).

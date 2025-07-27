@@ -38,6 +38,6 @@ draft: false
 
 #### 聯繫我們
 
-如有問題，請通過contact@charmtop.com.hk聯繫我們。
+如有任何關於本私隱政策或您個人信息的問題，請聯繫我們：[info@charmtop.com.hk](mailto:info@charmtop.com.hk)。
 
 最後更新：2023年10月10日
