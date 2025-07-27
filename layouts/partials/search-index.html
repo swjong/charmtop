@@ -1,0 +1,26 @@
+{{- $allSections := slice -}}
+{{- range site.Home.Sections -}}
+  {{- $allSections = $allSections | append .Section -}}
+{{- end -}}
+
+{{- $include_all_sections := site.Params.search.include_all_sections -}}
+{{- $search_sections := $allSections -}}
+
+{{- if not $include_all_sections -}}
+{{- $search_sections = site.Params.search.include_sections | default site.Params.mainSections -}}
+{{- end -}}
+
+{{- if reflect.IsSlice $search_sections -}}
+  {{- $search_sections = $search_sections -}}
+{{- else if reflect.IsMap $search_sections -}}
+  {{- $search_sections = slice -}}
+{{- else -}}
+  {{- $search_sections = slice $search_sections -}}
+{{- end -}}
+<!-- search index -->
+<script>
+  let indexURL = "{{ "searchindex.json" | relLangURL }}";
+  let includeSectionsInSearch = {{ $search_sections | jsonify | safeJS }};
+  let search_no_results = {{ i18n "search_no_results" | default "0 results for" | jsonify }};
+  let search_initial_message = {{ i18n "search_initial_message" | jsonify }};
+</script>

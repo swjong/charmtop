@@ -1,0 +1,91 @@
+{
+  "site": {
+    "name": "Charmtop Consultancy",
+    "type": "hugo_static_site",
+    "theme": "hugoplate",
+    "base_url": "http://localhost:1313",
+    "production_url": "https://charmtop.com"
+  },
+  "languages": {
+    "default": "zh",
+    "supported": [
+      {
+        "code": "zh",
+        "name": "Chinese",
+        "weight": 1,
+        "content_dir": "content/chinese",
+        "url_prefix": "",
+        "has_cjk": true
+      },
+      {
+        "code": "en",
+        "name": "English", 
+        "weight": 2,
+        "content_dir": "content/english",
+        "url_prefix": "en"
+      }
+    ]
+  },
+  "configuration_files": {
+    "primary": [
+      "hugo.toml",
+      "config.toml",
+      "hugo.yaml"
+    ],
+    "navigation": {
+      "footer": {
+        "zh": "config/_default/navigation/menus.zh.toml",
+        "en": "config/_default/navigation/menus.en.toml"
+      }
+    }
+  },
+  "content_structure": {
+    "privacy_policy": {
+      "zh": {
+        "source": "content/chinese/pages/privacy-policy.md",
+        "url": "/privacy-policy/",
+        "generated": "public/privacy-policy/index.html"
+      },
+      "en": {
+        "source": "content/english/pages/privacy-policy.md", 
+        "url": "/en/privacy-policy/",
+        "generated": "public/en/privacy-policy/index.html"
+      }
+    }
+  },
+  "troubleshooting": {
+    "common_issues": [
+      {
+        "issue": "footer_links_redirect_homepage",
+        "symptoms": ["Privacy policy links go to / instead of /privacy-policy/"],
+        "solution": "Replace pageRef with url parameter in menu configuration files",
+        "files_to_check": [
+          "config/_default/navigation/menus.zh.toml",
+          "config/_default/navigation/menus.en.toml"
+        ]
+      },
+      {
+        "issue": "port_conflict",
+        "symptoms": ["Hugo server fails to start", "Address already in use"],
+        "solution": "Kill existing hugo process and restart",
+        "commands": ["lsof -i :1313", "kill -9 <PID>", "hugo serve --bind 0.0.0.0 --port 1313"]
+      }
+    ]
+  },
+  "development_commands": {
+    "start_server": "hugo serve --bind 0.0.0.0 --port 1313 --baseURL http://localhost:1313",
+    "build": "hugo --gc --minify",
+    "check_status": "curl -I http://localhost:1313/privacy-policy/"
+  },
+  "file_locations": {
+    "working_directory": "/home/newuser/charmtop",
+    "content_root": "content/",
+    "public_root": "public/",
+    "config_root": "config/_default/"
+  },
+  "environment": {
+    "os": "linux",
+    "hugo_install": "snap",
+    "timezone": "Asia/Hong_Kong"
+  }
+}

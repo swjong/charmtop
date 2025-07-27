@@ -1,33 +1,43 @@
 ---
-title: "Privacy"
+title: "私隱政策"
 # meta title
 meta_title: ""
 # meta description
-description: "This is meta description"
+description: "這是Charmtop的私隱政策"
 # save as draft
 draft: false
 ---
 
-#### Responsibility of Contributors
+#### 引言
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+本私隱政策描述了Charmtop（「我們」、「本公司」）在您訪問我們的網站或使用我們的服務時如何收集、使用和分享您的個人信息。
 
-pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum. Lacus, facilisis tristique lectus in.
+#### 我們收集的信息
 
-#### Gathering of Personal Information
+我們收集您直接提供的信息，例如填寫表格或聯繫我們時。這可能包括姓名、電子郵件、電話號碼和其他細節。我們還通過Cookie和分析工具自動收集數據，如IP地址、瀏覽器類型和使用模式。
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+#### 我們如何使用您的信息
 
-#### Protection of Personal- Information
+我們使用您的信息來提供和改進我們的服務、回應查詢、發送更新，並在獲得您的同意下用於營銷目的。我們不會出售您的個人數據。
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.
+#### 分享您的信息
 
-Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat
+我們可能與服務提供商、法律機構（如果需要）或在業務轉讓中分享數據。我們確保第三方遵守私隱標準。
 
-#### Privacy Policy Changes
+#### 您的權利
 
-1. Sll the Themefisher items are designed to be with the latest , We check all
-2. comments that threaten or harm the reputation of any person or organization
-3. personal information including, but limited to, email addresses, telephone numbers
-4. Any Update come in The technology Customer will get automatic Notification.
+您有權訪問、更正、刪除您的數據，或選擇退出某些使用。請聯繫我們行使這些權利。
+
+#### 安全
+
+我們實施合理的措施來保護您的數據，但沒有方法是100%安全的。
+
+#### 本政策的更改
+
+我們可能定期更新本政策。更改將在此處發布，並附上更新日期。
+
+#### 聯繫我們
+
+如有問題，請通過contact@charmtop.com.hk聯繫我們。
+
+最後更新：2023年10月10日
