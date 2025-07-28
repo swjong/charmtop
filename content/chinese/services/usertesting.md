@@ -59,7 +59,7 @@ image: "https://via.placeholder.com/1200x600?text=AI+Hardware+Productivity+Study
 - 跨部門協作的**標準化工作模板**
 
 **立即聯絡我們**，免費索取**效能診斷白皮書**及**定制化研究方案**！
-📞 852 2581 1328 | 📩 contact@charmtop.com.hk
+📞 852 2581 1328 | 📩 info@charmtop.com.hk
 
 > **技術賦能未來，數據驅動決策**
 > —— 創高顧問 智能生產力實驗室

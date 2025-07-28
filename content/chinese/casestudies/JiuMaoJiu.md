@@ -1,6 +1,6 @@
 ---
 title: 商舖及食肆網絡及視像監察
-email: IT@charmtop.com.hk
+email: info@charmtop.com.hk
 image: "images/retailmonitoring.jpeg"
 description: 利用先進視像分析技術為零售及餐飲業提供全面的監控解決方案，實現客流量分析及營運優化
 # social:

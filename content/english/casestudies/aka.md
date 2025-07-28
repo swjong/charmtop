@@ -1,7 +1,7 @@
 ---
 title: AI Camera Systems for Security Assistance
 image: "images/aka/AKA_08.jpg"
-email: IT@charmtop.com.hk
+email: info@charmtop.com.hk
 description: this is meta description
 social:
   - name: github

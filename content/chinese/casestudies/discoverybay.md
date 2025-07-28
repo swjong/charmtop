@@ -1,6 +1,6 @@
 ---
 title: 利用AI監察非法闖人
-email: IT@charmtop.com.hk
+email: info@charmtop.com.hk
 image: "images/dbcoastline.png"
 description: this is meta description
 social:

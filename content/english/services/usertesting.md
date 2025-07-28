@@ -59,7 +59,7 @@ Through **Charmtop Consulting's Professional Research Services**, companies gain
 - **Standardized work templates** for cross-departmental collaboration
 
 **Contact us now** for a free **Performance Diagnostic White Paper** and **Customized Research Proposal**!
-📞 852 2581 1328 | 📩 contact@charmtop.com.hk
+📞 852 2581 1328 | 📩 info@charmtop.com.hk
 
 > **Technology Empowering the Future, Data-Driven Decisions**
 > —— Charmtop Consulting, Intelligent Productivity Lab

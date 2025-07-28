@@ -1,6 +1,6 @@
 ---
 title: 以AI視像鏡頭協助保安
-email: IT@charmtop.com.hk
+email: info@charmtop.com.hk
 image: "images/aka/AKA_08.jpg"
 description: this is meta description
 social:
