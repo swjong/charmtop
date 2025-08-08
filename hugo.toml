@@ -1,3 +1,4 @@
+baseURL = "https://www.charmtop.com.hk/"
 title = "Charmtop"
 theme = "hugoplate"
 timeZone = "Asia/Hong_Kong"
