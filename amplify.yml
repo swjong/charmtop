@@ -20,7 +20,13 @@ frontend:
     build:
       commands:
         - export PATH=/usr/local/bin:/usr/local/go/bin:$PATH && npm run project-setup
-        - export PATH=/usr/local/bin:/usr/local/go/bin:$PATH && npm run build
+        - |
+  export PATH=/usr/local/bin:/usr/local/go/bin:$PATH
+  if [ "$AWS_BRANCH" = "production" ]; then
+    hugo --baseURL https://production.d9rpc922tv8bl.amplifyapp.com/ --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic
+  else
+    hugo --baseURL https://www.charmtop.com.hk/ --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic
+  fi
   artifacts:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: /public
