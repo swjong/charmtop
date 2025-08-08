@@ -1,0 +1,26 @@
+<!-- Favicon -->
+{{ $favicon := site.Params.favicon | default "images/favicon.png" }}
+{{ $faviconPath := printf "static/%s" $favicon }}
+
+<!-- Standard favicon -->
+<link rel="shortcut icon" href="{{ $favicon | absURL }}" type="image/x-icon">
+<link rel="icon" href="{{ $favicon | absURL }}" type="image/x-icon">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ $favicon | absURL }}">
+
+<!-- Android Chrome -->
+<link rel="icon" type="image/png" sizes="192x192" href="{{ $favicon | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ $favicon | absURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ $favicon | absURL }}">
+
+<!-- Microsoft -->
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{{ $favicon | absURL }}">
+<meta name="theme-color" content="#ffffff">
+
+<!-- PWA manifest -->
+<link rel="manifest" href="{{ "manifest.json" | absURL }}">
+
+<!-- Safari Pinned Tab -->
+<link rel="mask-icon" href="{{ $favicon | absURL }}" color="#5bbad5">
