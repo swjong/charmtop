@@ -27,10 +27,10 @@ frontend:
   else
     hugo --baseURL https://www.charmtop.com.hk/ --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic
   fi
-  artifacts:
-    # IMPORTANT - Please verify your build output directory
-    baseDirectory: /public
-    files:
-      - "**/*"
-  cache:
-    paths:
+artifacts:
+  # IMPORTANT - Please verify your build output directory
+  baseDirectory: /public
+  files:
+    - "**/*"
+cache:
+  paths:
