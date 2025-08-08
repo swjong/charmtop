@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "hugo server",
     "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
+    "build:production": "hugo --baseURL https://www.charmtop.com.hk/ --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
+    "build:staging": "hugo --baseURL https://production.d9rpc922tv8bl.amplifyapp.com/ --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
     "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
     "dev:example": "cd exampleSite && hugo server",
     "build:example": "cd exampleSite && hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
