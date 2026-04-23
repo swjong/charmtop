@@ -35,9 +35,7 @@ frontend:
         - export NVM_DIR="$HOME/.nvm"
         - . "$NVM_DIR/nvm.sh"
         - nvm use 20
-        - node -v
         - export PATH="$HOME/.local/bin:$HOME/.local/go/bin:$PATH"
-        - npm run project-setup
         - if [ "$AWS_BRANCH" = "production" ]; then hugo --baseURL https://production.d9rpc922tv8bl.amplifyapp.com/ --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic; else hugo --baseURL https://www.charmtop.com.hk/ --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic; fi
   artifacts:
     # IMPORTANT - Please verify your build output directory
