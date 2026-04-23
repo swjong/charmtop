@@ -3,24 +3,33 @@ frontend:
   phases:
     preBuild:
       commands:
+        - nvm install 20
+        - nvm use 20
+        - node -v
+        - npm -v
+        - mkdir -p "$HOME/.local/bin" "$HOME/.local"
         - curl -LO "https://github.com/gohugoio/hugo/releases/download/v0.131.0/hugo_extended_0.131.0_Linux-64bit.tar.gz"
-        - tar -xzf hugo_extended_0.131.0_Linux-64bit.tar.gz
-        - sudo mv hugo /usr/local/bin/hugo
+        - tar -xzf hugo_extended_0.131.0_Linux-64bit.tar.gz hugo
+        - mv hugo "$HOME/.local/bin/hugo"
+        - chmod +x "$HOME/.local/bin/hugo"
         - rm hugo_extended_0.131.0_Linux-64bit.tar.gz
         - curl -LO "https://dl.google.com/go/go1.22.6.linux-amd64.tar.gz"
-        - sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.6.linux-amd64.tar.gz
+        - rm -rf "$HOME/.local/go" && tar -C "$HOME/.local" -xzf go1.22.6.linux-amd64.tar.gz
         - rm go1.22.6.linux-amd64.tar.gz
-        - export PATH=/usr/local/bin:$PATH
+        - export PATH="$HOME/.local/bin:$HOME/.local/go/bin:$PATH"
+        - hugo version
+        - go version
         - mkdir -p content/chinese/blog/post static/images/blog
         # Sync content from S3
         - aws s3 sync s3://itsquarefullcontent/content/ content/chinese/blog/ 
         - aws s3 sync s3://itsquarefullcontent/static/images/blog/ static/images/blog/
-        - export PATH=/usr/local/bin:/usr/local/go/bin:$PATH && npm install
-        - export PATH=/usr/local/bin:/usr/local/go/bin:$PATH && npm run project-setup
+        - npm install
+        - npm run project-setup
     build:
       commands:
-        - export PATH=/usr/local/bin:/usr/local/go/bin:$PATH && npm run project-setup
-        - export PATH=/usr/local/bin:/usr/local/go/bin:$PATH && if [ "$AWS_BRANCH" = "production" ]; then hugo --baseURL https://production.d9rpc922tv8bl.amplifyapp.com/ --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic; else hugo --baseURL https://www.charmtop.com.hk/ --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic; fi
+        - export PATH="$HOME/.local/bin:$HOME/.local/go/bin:$PATH"
+        - npm run project-setup
+        - if [ "$AWS_BRANCH" = "production" ]; then hugo --baseURL https://production.d9rpc922tv8bl.amplifyapp.com/ --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic; else hugo --baseURL https://www.charmtop.com.hk/ --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic; fi
   artifacts:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: public
