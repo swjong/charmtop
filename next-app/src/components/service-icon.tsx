@@ -1,0 +1,50 @@
+import {
+  Cable,
+  Shield,
+  FlaskConical,
+  Server,
+  Wifi,
+  HardDrive,
+  Monitor,
+  Router,
+  Fingerprint,
+  Eye,
+  Cloud,
+  Settings,
+  Wrench,
+  Laptop,
+  Network,
+  Lock,
+  Camera,
+  Bug,
+  CheckCircle,
+  ClipboardCheck,
+  type LucideIcon,
+} from "lucide-react";
+
+const iconMap: Record<string, LucideIcon> = {
+  networking: Network,
+  surveillance: Shield,
+  usertesting: FlaskConical,
+  cable: Cable,
+  server: Server,
+  wifi: Wifi,
+  storage: HardDrive,
+  monitor: Monitor,
+  router: Router,
+  security: Lock,
+  camera: Camera,
+  cloud: Cloud,
+  settings: Settings,
+  repair: Wrench,
+  laptop: Laptop,
+  fingerprint: Fingerprint,
+  eye: Eye,
+  bug: Bug,
+  check: CheckCircle,
+  clipboard: ClipboardCheck,
+};
+
+export function getServiceIcon(slug: string): LucideIcon {
+  return iconMap[slug] || Settings;
+}
